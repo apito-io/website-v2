@@ -1,7 +1,7 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
 
-import {Image, jsx} from "theme-ui";
+import { Image, jsx } from "theme-ui";
 
 const SingleDatabaseCard = ({ data }) => {
   return (
@@ -35,26 +35,29 @@ const styles = {
     },
   },
   content: {
-    padding: "40px",
+    padding: "10px 40px",
     flexGrow: 1,
+    display: "flex",
+    alignItems: "center",
   },
   link: {
-    bg: "#263238",
+    // bg: "#263238",
+    bg: "#f5f5f5",
     padding: "1rem 0",
     display: "block",
-    color: "white",
+    color: "black",
     textAlign: "center",
     fontWeight: 700,
     fontSize: 16,
     letterSpacing: "2px",
     ":hover": {
       textDecoration: "none",
-      color: "green"
+      color: "red",
     },
-    borderRadius: '0 0 5px 5px'
+    borderRadius: "0 0 5px 5px",
   },
   img: {
-    height: 'auto',
+    height: "auto",
     display: "block",
     margin: "0 auto",
   },
