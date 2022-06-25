@@ -6,7 +6,7 @@ import { HomePageData } from "../data/home";
 import ExampleQueries from "./example-queries";
 import React, { useState } from "react";
 import { SwiperSlide, Swiper } from "swiper/react";
-import { FreeMode, Navigation, Thumbs } from "swiper";
+import { FreeMode, Navigation, Thumbs, Autoplay, EffectFade } from "swiper";
 
 const FeatureBanner = ({ data }) => {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
@@ -50,14 +50,18 @@ const FeatureBanner = ({ data }) => {
               </SwiperSlide>
             </Swiper>
             <Swiper
-              spaceBetween={0}
-              slidesPerView={1}
+              spaceBetween={30}
+              //   slidesPerView={1} // Active if Without Center mode
+              slidesPerView={2} // Active if center mode
               thumbs={{ swiper: thumbsSwiper }}
-              modules={[FreeMode, Navigation, Thumbs]}
-              //   autoplay={{
-              //     delay: 2000,
-              //     disableOnInteraction: false,
-              //   }}
+              centeredSlides={true} // Active if center mode
+              //   centeredSlidesBounds={true}
+              modules={[FreeMode, Navigation, Thumbs, Autoplay]}
+              autoplay={{
+                delay: 3000,
+                disableOnInteraction: false,
+              }}
+              //   effect={"fade"}
             >
               {data?.images &&
                 data?.images.map((image) => {
