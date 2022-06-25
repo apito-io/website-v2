@@ -1,25 +1,3 @@
-import anguler from "../icons/png/logo_angular.png";
-import arangoDB from "../icons/png/logo_arangoDB.png";
-import casandra from "../icons/png/logo_casandra.png";
-import couchbase from "../icons/png/logo_couchbase.png";
-import couchDB from "../icons/png/logo_couchDB.png";
-import dynamoDB from "../icons/png/logo_dynamoDB.png";
-import firestore from "../icons/png/logo_firestore.png";
-import gatsby from "../icons/png/logo_gatsby.png";
-import hugo from "../icons/png/logo_hugo.png";
-import mariaDB from "../icons/png/logo_mariaDB.png";
-import mongoDB from "../icons/png/logo_mongoDB.png";
-import mySQL from "../icons/png/logo_mySQL.png";
-import nextjs from "../icons/png/logo_nextjs.png";
-import nuxt from "../icons/png/logo_nuxt.png";
-import oracle from "../icons/png/logo_oracle.png";
-import postgresSQL from "../icons/png/logo_postgresSQL.png";
-import reactjs from "../icons/png/logo_react.png";
-import sapper from "../icons/png/logo_sapper.png";
-import SQLServer from "../icons/png/logo_SQLServer.png";
-import svelte from "../icons/png/logo_svelte.png";
-import vue from "../icons/png/logo_vue.png";
-
 export const HomePageData = {
     header: {
         title: 'Modern & Extensible Headless CMS',

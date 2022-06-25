@@ -43,8 +43,8 @@ export default HeroBanner;
 
 const styles = {
   section: {
-    pt: [40, null, null, 60],
-    pb: [60, null, null, 70],
+    pt: [40, null, null, 30],
+    pb: [60, null, null, 40],
   },
   grid: {
     gap: [40, null, null, 60],
@@ -69,7 +69,7 @@ const styles = {
     p: {
       fontSize: [16, null, null, 20],
       lineHeight: 2,
-      maxWidth: 620,
+      maxWidth: 700,
       margin: "25px auto 0",
     },
     button: {

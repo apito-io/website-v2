@@ -43,7 +43,7 @@ function Hello() {
                 <Features features={BackendPageData.features2} hideSection={true}/>
                 <Features features={BackendPageData.features3} hideSection={true}/>
 
-                <Databases data={BackendPageData.databases}/>
+                <Databases data={CommonData.databases}/>
 
                 <Footer/>
             </ThemeProvider>

@@ -1,38 +1,54 @@
-import anguler from "../icons/png/logo_angular.png";
-import arangoDB from "../icons/png/logo_arangoDB.png";
-import casandra from "../icons/png/logo_casandra.png";
-import couchbase from "../icons/png/logo_couchbase.png";
-import couchDB from "../icons/png/logo_couchDB.png";
-import dynamoDB from "../icons/png/logo_dynamoDB.png";
-import firestore from "../icons/png/logo_firestore.png";
-import gatsby from "../icons/png/logo_gatsby.png";
-import hugo from "../icons/png/logo_hugo.png";
-import mariaDB from "../icons/png/logo_mariaDB.png";
-import mongoDB from "../icons/png/logo_mongoDB.png";
-import mySQL from "../icons/png/logo_mySQL.png";
-import nextjs from "../icons/png/logo_nextjs.png";
-import nuxt from "../icons/png/logo_nuxt.png";
-import oracle from "../icons/png/logo_oracle.png";
-import postgresSQL from "../icons/png/logo_postgresSQL.png";
-import reactjs from "../icons/png/logo_react.png";
-import sapper from "../icons/png/logo_sapper.png";
-import SQLServer from "../icons/png/logo_SQLServer.png";
-import svelte from "../icons/png/logo_svelte.png";
-import vue from "../icons/png/logo_vue.png";
-
 export const BackendPageData = {
     header: {
-        title: '<span style="color:#EA3A60"> Develop API</span> for web and mobile apps',
+        title: 'Develop API for <span style="color:#EA3A60"> web </span> and <span style="color:#EA3A60"> mobile </span> apps',
         //image:
         //    "https://cdn.apito.io/media/apito_website/Y97T0H5XM7_apito_console_full_picture.png",
         description:
-            "The Most Powerful Headless CMS for Your Content with CDN, Webhooks, Team Collaborations, Content Revision, Cloud Functions and Much more",
+            "Manage Less Infrastructure, Apito is a Low Code Platform. " +
+            "<br/>" +
+            "Deliver Projects in weeks not months.",
         button: {
             label: 'Explore Full Features',
             link: '/headless-cms'
         }
     },
     features1: {
+        slogan: "None",
+        title: "None",
+        data: [
+            {
+                cover: {
+                    "url": "https://cdn.apito.io/media/apito_website/MG3MQF2EPF_cloud_functions.png"
+                },
+                description: {
+                    "markdown": "Ability to extend your api with cloud functions"
+                },
+                header: "FUNCTION",
+                icon: {
+                    "url": "https://cdn.apito.io/media/apito_website/8XRYHC4LBQ_auth_module.svg"
+                },
+                link: "/docs/extensions/logic/writing-cloud-functions",
+                link_text: "Extend Your API",
+                title: "Write Cloud Function to Extend your API"
+            },
+            {
+                cover: {
+                    "url": "https://cdn.apito.io/media/apito_website/homepagev2/2CIRIBQ6GB_apito_console.png"
+                },
+                description: {
+                    "markdown": "Run apito server in docker and build your application locally"
+                },
+                header: "DOCKER READY",
+                icon: {
+                    "url": "https://cdn.apito.io/media/apito_website/TX9PNRYAVX_webhooks.svg"
+                },
+                link_text: "See How",
+                link: "https://docs.apito.io/quick-start",
+                title: "Develop your API offline in your localhost"
+            },
+        ],
+    },
+    /*features1: {
         slogan: "None",
         title: "None",
         data: [
@@ -70,7 +86,7 @@ export const BackendPageData = {
                 title: "Build API in both GraphQL & REST API",
             },
         ],
-    },
+    },*/
     exampleQueries: {
         //slogan: "QUERY PATTERNS",
         //title: "Develop API with complex Queries and Search",
@@ -525,24 +541,25 @@ curl https://api.apito.io/secured/rest/ecom/category?name:contains="shirt"`,
                 link_text: "See How its Done",
                 title: "Teams & Collaboration",
             },
-        ],
-    },
-    databases: {
-        header: "CONNECT EASILY",
-        title: "Connect with Most Popular Databases",
-        data: [
-            {id: 1, title: "PostgresSQL", logo: postgresSQL},
-            {id: 2, title: "SQL Server", logo: SQLServer},
-            {id: 3, title: "MySQL", logo: mySQL},
-            {id: 4, title: "MariaDB", logo: mariaDB},
-            {id: 5, title: "ArangoDB", logo: arangoDB},
-            {id: 6, title: "MongoDB", logo: mongoDB},
-            {id: 7, title: "Firestore", logo: firestore},
-            {id: 8, title: "DynamoDB", logo: dynamoDB},
-            {id: 9, title: "Couchbase", logo: couchbase},
-            {id: 10, title: "Casandra", logo: casandra},
-            {id: 11, title: "CouchDB", logo: couchDB},
-            {id: 12, title: "Oracle", logo: oracle},
+            {
+                cover: {
+                    url: "https://cdn.apito.io/media/apito_website/YQH78E9QI4_cloud_infra.svg",
+                },
+                description: {
+                    isMarkdown: true,
+                    markdown: "What makes graphqli very unique is the ability to self host  graphqli headless cms to your own cluster or on your favourite cloud infrastructure within seconds.\n" +
+                        "\n" +
+                        "Host unlimited projects and **ability to choose different database per project !!**",
+                },
+                textAlign: 'left',
+                header: "SELF HOST",
+                icon: {
+                    url: "https://cdn.apito.io/media/apito_website/TX9PNRYAVX_webhooks.svg",
+                },
+                link: "/self-host-apito",
+                link_text: "Learn More",
+                //title: "Content Modeling tools",
+            },
         ],
     },
 };

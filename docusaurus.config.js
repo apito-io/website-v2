@@ -99,11 +99,11 @@ const config = {
                         label: 'Backend-as-Service',
                         position: 'right',
                     },
-                    {
+/*                    {
                         to: '/headless-cms',
                         label: 'Headless CMS',
                         position: 'right',
-                    },
+                    },*/
                     {
                         to: '/self-host-apito',
                         label: 'Self Host',
@@ -128,9 +128,6 @@ const config = {
                                 position: 'right',
                             },
                             {
-                                to: '/features',
-                                label: 'Features',
-                            }, {
                                 to: '/self-host-apito',
                                 label: 'Self Host',
                             },
