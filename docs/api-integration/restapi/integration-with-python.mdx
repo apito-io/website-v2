@@ -1,0 +1,33 @@
+---
+sidebar_label: Python
+title: Apito REST API Integration with Python Project
+---
+<head>
+    <meta property="og:type" content="article" />
+</head>
+
+import ApiSecretNote from "./shared/api-secret-note.mdx"
+
+Python HTTP module defines the classes which provide the client-side of the HTTP and HTTPS protocols.
+In most of the programs, the HTTP module is not directly used and is clubbed with the `urllib` module to handle URL connections and interaction with HTTP requests.
+Today we will learn how to use a Python HTTP client to fire HTTP request and then parse response status and get response body data.
+
+<ApiSecretNote />
+
+```python
+import http.client
+
+conn = http.client.HTTPSConnection("https://api.apito.com/secured/rest/project")
+
+headers = {
+    'content-type': "application/json",
+    'authorization': "Bearer API_SECRET"
+    }
+
+conn.request("GET", "/api", headers=headers)
+
+res = conn.getresponse()
+data = res.read()
+
+print(data.decode("utf-8"))
+```

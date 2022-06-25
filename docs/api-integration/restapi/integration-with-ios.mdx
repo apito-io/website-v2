@@ -1,0 +1,42 @@
+---
+sidebar_label: iOS
+title: Apito REST API Integration with iOS
+---
+<head>
+    <meta property="og:type" content="article" />
+</head>
+
+import ApiSecretNote from "./shared/api-secret-note.mdx"
+
+The Foundation framework provides a base layer of functionality for apps and frameworks, including data storage and persistence, text processing,
+date and time calculations, sorting and filtering, and networking. The classes, protocols, and data types defined by Foundation are used throughout
+the macOS, iOS, watchOS, and tvOS SDKs.
+
+<ApiSecretNote />
+
+```swift
+import Foundation
+
+let headers = [
+  "content-type": "application/json",
+  "authorization": "Bearer API_SECRET"
+]
+
+let request = NSMutableURLRequest(url: NSURL(string: "https://api.apito.com/secured/rest/project-id")! as URL,
+                                        cachePolicy: .useProtocolCachePolicy,
+                                    timeoutInterval: 10.0)
+request.httpMethod = "GET"
+request.allHTTPHeaderFields = headers
+
+let session = URLSession.shared
+let dataTask = session.dataTask(with: request as URLRequest, completionHandler: { (data, response, error) -> Void in
+  if (error != nil) {
+    print(error)
+  } else {
+    let httpResponse = response as? HTTPURLResponse
+    print(httpResponse)
+  }
+})
+
+dataTask.resume()
+```

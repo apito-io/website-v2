@@ -1,0 +1,40 @@
+---
+id: usages-of-swagger-and-graphql-explorer
+title: Usages of Swagger & GraphQL Explorer
+sidebar_label: API Explorer
+
+image: 'https://cdn.apito.io/media/apito_documentation/G61YK74BWM_API_Credential___GraphQL_Explorer.png'
+keywords: [database model, api design, api, database normalization, nosql, nosql database design]
+---
+<head>
+    <meta property="og:type" content="article" />
+</head>
+
+Apito Engine Generates both GraphQL & RESTful API Endpoints ( Swagger ) based on your models, and you can easily test both of them
+by going to `API Explorer` tab in Apito Console
+
+## GraphiQL Explorer
+
+The first one is the GraphQL schema explorer called GraphiQL. Apito Console allows you to explore your generated GraphQL Server prior to usage.
+You can explore all the `Queries` and `Mutations` on the left side of the Explorer.
+
+<img alt='GraphQLi Explorer' width='auto' height='auto' src='https://cdn.apito.io/media/apito_documentation/G61YK74BWM_API_Credential___GraphQL_Explorer.png' />
+
+## Swagger UI
+
+The second one is the auto generated RESTful API ( Swagger )
+
+<img alt='Swagger UI' width='auto' height='auto' src='https://cdn.apito.io/media/apito_documentation/180KXM616L_API_Credential___RESTful_API_Explorer.png' />
+
+### Trying Out the RESTApi Online
+
+If you want to test your apito swagger api online or via curl first you have to generate an `Api Secret`. Click [here](/docs/console/api-integration-with-your-application) if you want to know how.
+If you already have your api secrets generated then go to **API > RESTApi** and click on the green `authorize` button on the top right side.
+
+Popup like similar below
+will show, and you have to put your `Api Secret` in the format of `Bearer token` and click the green `Authorize` button.
+
+<img alt='How to set a Bearer Token' width='auto' height='auto' src='https://cdn.apito.io/media/apito_documentation/UOAOLUJ6TC_Bearer_token_Set.png' />
+
+Now click on any rest api from the list and click the `Try it out` button on the right side of the body of the api. You will be able to see a Blue `Execute` button
+at the end of Parameters body. Click `Execute` button to try out the api. If your api has content then it will show in the response box, right below.

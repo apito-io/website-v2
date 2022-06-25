@@ -1,0 +1,33 @@
+---
+id : auth-support-in-api
+title: Adding Authentication Support to your API
+sidebar_label: Enable Auth Extension
+
+image: 'https://cdn.apito.io/media/apito_documentation/RDNG5RX5UX_Apito_Console___Authentication.png'
+keywords: [database model, api design, api, database normalization, nosql, nosql database design, auth support, authentication]
+---
+<head>
+    <meta property="og:type" content="article" />
+</head>
+
+You can use Auth Extension if your application has a login & signup feature, and your data is protected and only accessible after login.
+
+Authentication is also a crucial part of any API or Backend. In order to add authentication support to our API first we have to create a role for which all authenticated users will belong to.
+Go to Roles section where we covered this in details. You can not enable Auth without a Role. Let's assume a role named `AuthUser` is created.
+
+## Enable Auth Extension
+
+For this, Got to **Settings > Add-Ons** then Click on the `Authentication` module. You will see this drawer pops up from the right. You can configure your authentication module here.
+Choose an Authentication Type and What role the logged-in user will belong to. Click Enable to add authentication support to your API.
+To check if authentication module added to your API or not, Go to Content tab and if you can see a model named `user` then authentication support has successfully added to your API.
+
+<img alt='Enable Auth Extension' width='auto' height='auto' src='https://cdn.apito.io/media/apito_documentation/RDNG5RX5UX_Apito_Console___Authentication.png' />
+
+## Supported Authentication Type
+
+At this moment we only support `phone` and `email` based authentication.
+
+## Authentication Roles
+
+Roles are very important part of the authentication module. The entire auth module depends on `Roles`. All the authenticated users will have the permissions of that role
+that you configure while you add the authentication module.

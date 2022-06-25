@@ -1,0 +1,41 @@
+---
+id: how-to-design-database-for-your-project
+title: Designing Databases of a Project
+sidebar_label: Database Design
+
+image: 'https://cdn.apito.io/media/apito_documentation/5IZDKXLO9K_Create_A_Model.png'
+keywords: [database model, api design, api, database normalization, nosql, nosql database design]
+---
+<head>
+  <meta property="og:type" content="article" />
+</head>
+
+Database modeling is the most crucial part of your project. Model is the base of what your api will look like.
+A model represents an entity of your business logic. For example if you are making an e-commerce website your model name could be, `Product`, `User`, `Order`, `Report`, `Shop` etc.
+
+
+## Creating a Model Entity
+
+In order to create model **Model** first click on the `Models` from the top navigation bar and click on the button on left side called `CREATE A MODEL`.
+You will see a page like below. Enter your model name and click `CREATE MODEL`. You will see a success message afterwards
+
+<img alt='Creating Model' title='Creating Model' width='auto' height='auto' src='https://cdn.apito.io/media/apito_documentation/5IZDKXLO9K_Create_A_Model.png'  />
+
+## Creating Fields Inside Models
+
+Click on the model from the left side menu in-order to add fields to a model. You will see a button appear in the body of the page called `ADD A FIELD / RELATION`. Click on that button
+to add fields to your model. Choose your relevant field type ( `Text`, `Number`, `Date`, `Dynamic List` etc) and fill up the necessary fields and click create.
+
+## Creating Relations Between Models
+
+In order to add relations between models click on the `ADD A FIELD` button or choose `Relation` from the left side of the side panel. You will see options like the picture below.
+
+In order to a relationship betweend models you have to configure `Forward` and `Backward` relationship. For example, If you are creating a relations between a products and category,
+Forward Relationship for that particular case could be **Products Has Many Categories** and Backward Relationship could be **Categories Has Many Products** This is also known as Many-to-Many Relationship
+
+Known As (Optional) field is there if you ever need to overwrite a relationship name in the api. For example if you have two relationship with the same model, lets say,
+For a project management application a project model could have multiple relationship with user model. One could be an assignee and other could be a reporter.
+You can use this field to assign different name to your relation. Or else you cant have two different relationship with the same model.
+
+<img alt='Modeling Relationship' width='auto' height='auto' src='https://cdn.apito.io/media/apito_documentation/C40KXDXNBH_Apito_Console___Creating_Relations.png' />
+

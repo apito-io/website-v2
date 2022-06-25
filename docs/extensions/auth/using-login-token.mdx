@@ -1,0 +1,45 @@
+---
+title: Using the Login Token in your Application
+sidebar_label: Login Token
+
+image: 'https://cdn.apito.io/media/apito_documentation/P60Y961Q0H_Apito_Console___Edit_A_Role.png'
+keywords: [database model, api design, api, database normalization, nosql, nosql database design]
+---
+<head>
+    <meta property="og:type" content="article" />
+</head>
+
+Login token is equivalent to `API_SECRET` in Apito. Those token could be used alternatively with each other.
+The main difference between those thow is how they are generated and what roles are they assigned to. Both `API_SECRET` and Login token operates on a `Role`.
+
+Whenever a Login Token is generated either via Login or Register it operates on a Role (The role that is given during Authentication AddOn Configuration).
+So generally speaking all the logged-in user will have access to that permissions given to that role.
+
+Let's say if these are the permissions that are assigned to role `authuser`
+
+### API Permission
+Model | Read | Create | Update | Delete
+:-- | :-- | :-- | :-- | :--: |
+Product | All | None | None | None |
+Category | All | None | None | None |
+Order | Personal data | Personal data | None | None |
+Store | All | None | None | None |
+... | ... | ... | ... | ... |
+
+As we can see user can read Product, Category, Store and only Their Personal Order. They are also allowed to create their own order but they cant update or delete anything.
+So an authenticated login token has this permission embedded into them and api will work accordingly.
+
+Lets say if you use Login token to call Order Delete then you will get an error.
+
+<img alt='Inspect a Role' width='auto' height='auto' src='https://cdn.apito.io/media/apito_documentation/P60Y961Q0H_Apito_Console___Edit_A_Role.png' />
+
+## Calling an API using Login Token
+
+Let's say after the user is logged in, You want to show the logged-in users their personal Orders.
+
+```bash
+curl -X GET "https://api.apito.io/secured/rest/project-id/orders"
+-H  "accept: application/json"
+-H  "Authorization: Bearer LOGIN_TOKEN"
+-H  "Content-Type: application/json"
+```

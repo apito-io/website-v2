@@ -1,0 +1,46 @@
+---
+sidebar_label: Golang
+title: Apito REST API Integration with Golang
+---
+<head>
+    <meta property="og:type" content="article" />
+</head>
+
+import ApiSecretNote from "./shared/api-secret-note.mdx"
+
+Perhaps one of the most important packages for any budding Go web developer is the `net/http` package.
+This package allows you to build HTTP servers in Go with its powerful compositional constructs.
+You can also use it to make remote http calls. Follow the example below
+
+## Using `net/http` library
+
+<ApiSecretNote />
+
+```
+package main
+
+import (
+	"fmt"
+	"net/http"
+	"io/ioutil"
+)
+
+func main() {
+
+	url := "https://api.apito.com/secured/rest/project-id"
+
+	req, _ := http.NewRequest("GET", url, nil)
+
+	req.Header.Add("content-type", "application/json")
+	req.Header.Add("authorization", "Bearer API_SECRET")
+
+	res, _ := http.DefaultClient.Do(req)
+
+	defer res.Body.Close()
+	body, _ := ioutil.ReadAll(res.Body)
+
+	fmt.Println(res)
+	fmt.Println(string(body))
+
+}
+```

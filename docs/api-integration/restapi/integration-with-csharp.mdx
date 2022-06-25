@@ -1,0 +1,24 @@
+---
+sidebar_label: C#
+title: Apito REST API Integration with C# Project
+---
+<head>
+    <meta property="og:type" content="article" />
+</head>
+
+import ApiSecretNote from "./shared/api-secret-note.mdx"
+
+RestClient is a simple class found in dot net api to make http calls. Its fairly simple and easy to use.
+You can find more about this class [here](https://docs.microsoft.com/en-us/dotnet/api/microsoft.azure.management.resourcemanager.fluent.core.restclient?view=azure-dotnet)
+
+## Using `RestClient`
+
+<ApiSecretNote />
+
+```java
+var client = new RestClient("https://api.apito.com/secured/rest/project-id");
+var request = new RestRequest(Method.GET);
+request.AddHeader("content-type", "application/json");
+request.AddHeader("authorization", "Bearer API_SECRETS");
+IRestResponse response = client.Execute(request);
+```

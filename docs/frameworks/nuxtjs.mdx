@@ -1,0 +1,82 @@
+---
+id: nuxtjs-integration-with-graphql
+title: Integrate NuxtJS with Apito
+sidebar_label: NuxtJS
+
+image: 'https://nuxtjs.org/preview.png'
+keywords: [database model, api design, api, database normalization, nosql, nosql database design]
+---
+<head>
+    <meta property="og:type" content="article" />
+</head>
+
+
+NuxtJS is known as The Intuitive Vue Framework. Nuxt is shipped with plenty of features to boost developer productivity, and the end user experience.
+
+
+- Clone this repo:
+```bash
+git clone https://github.com/apito/nuxtjs-apito-todo-app.git
+cd nuxtjs-apito-todo-app
+  ```
+
+- Install npm modules:
+```bash
+yarn install
+  ```
+
+- Open `apollo/clientConfig.js` and configure Hasura's GraphQL Endpoint as follows:
+```js
+  import { InMemoryCache } from "apollo-cache-inmemory";
+  export default function(context){
+    return {
+          httpLinkOptions: {
+              uri: 'https://api.apito.com/secured/graphql',
+              credentials: 'same-origin'
+          },
+          cache: new InMemoryCache()
+    }
+  }
+  ```
+
+- We have defined the graphql query in `apollo/queries/fetchAuthor.gql`.
+  - GraphQL query
+
+  ```graphql
+
+  query {
+    author {
+      id
+      name
+    }
+  }
+
+    ```
+
+  - In `pages/index.vue`, we import author query.
+  ```js
+
+  <script>
+  import author from '~/apollo/queries/fetchAuthor'
+
+  export default {
+    apollo: {
+      author: {
+        prefetch: true,
+        query: author
+      }
+    },
+    head: {
+      title: 'Authors of Blog'
+    }
+  }
+  </script>
+
+    ```
+
+- Run the app:
+```bash
+npm run dev
+  ```
+
+For detailed explanation on how things work, checkout [Nuxt.js docs](https://nuxtjs.org).

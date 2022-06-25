@@ -1,0 +1,73 @@
+---
+title: Auto Website Deployment via Vercel Deploy Hooks
+sidebar_label: Netlify Build Hooks
+id: website-deployment-using-netlify-build-hooks
+
+image: 'https://d33wubrfki0l68.cloudfront.net/51b3c2b9b2cb2eb70fd9631385a2b0d2bc60b1ea/45997/images/configure-builds-build-hooks.png'
+keywords: [website deploy, auto deploy, netlify]
+---
+<head>
+    <meta property="og:type" content="article" />
+</head>
+
+
+Netlify Build hooks are URLs you can use to trigger new builds and deploys. You can find them in `Site settings` > `Build & deploy` > `Continuous deployment` > `Build hooks`.
+
+<img alt='Configure Webhooks' width='auto' height='auto' src='https://d33wubrfki0l68.cloudfront.net/51b3c2b9b2cb2eb70fd9631385a2b0d2bc60b1ea/45997/images/configure-builds-build-hooks.png' />
+
+To add a new build hook, select `Add build hook`. The name of the build hook will appear in your list of build hooks as well as in the default deploy message
+for each deploy triggered by the hook.
+
+By default, choose a branch to build. This list will only include branches that have been deployed at least once.
+
+Netlify will provide you a unique URL for the build hook after you save your build hook settings. You must send a POST request to that URL to activate this hook.
+
+This POST request will most likely be issued by a service you want to integrate with Netlify, but you can also send it yourself.
+
+You can, for example run a curl command from your terminal:
+
+```shell
+curl -X POST -d '{}' https://api.netlify.com/build_hooks/5c23354f454e1350f8543e78
+```
+
+:::note
+Builds must be active for build hooks to trigger builds of your site.
+:::
+
+## Parameters
+Build hooks accept the following optional URL query parameters to alter the behavior of the triggered build:
+
+  * `trigger_branch`: parameter that specifies which repository branch the build will use. If the branch does not exist in your repository at the time of the build, the build will fail, with an error message in the build log.
+  * `trigger_title`: parameter that specifies a title to replace the default deploy message in your site deploy list.
+
+Here is an example build hook URL using both available parameters:
+
+```shell
+https://api.netlify.com/build_hooks/5c23354f454e1350f8543e78?trigger_branch=testing&trigger_title=triggered+by+This+Awesome+Service
+```
+This would trigger a deployment from an existing branch called  testing , with a custom message: `triggered by This Awesome Service`.
+
+<img alt='Creating Custom Webhooks' width='auto' height='auto' src='https://d33wubrfki0l68.cloudfront.net/17b4f950c26d0ff61f0348991cec52763b8b5ad4/f6fd6/images/configure-builds-custom-hook-deploy.png' />
+
+## Payload
+You can send a custom payload in your build hook POST request. The contents must be passed as a string, which will be URL-encoded and made available
+in the triggered build as an [environment variable](https://docs.netlify.com/configure-builds/environment-variables/#build-hook-metadata-and-payload).
+You can access it in the build by using the variable `INCOMING_HOOK_BODY`.
+
+
+## Add the Webhook in Apito
+
+Finally, add a webhook in the Apito Console using the url that you have build. To create a webhook you have to go to `Settings` in Apito Console then `Webhooks` from the left
+navigation bar and click `Create a Webhook`
+
+You  have to fill in:
+
+  * `Name` Name of the webhooks
+  * `Model` The model that the webhook will reflect to
+  * `Operation` Choose from which action you would like to trigger the webhook for
+  * `Webhook URL` The Gitlab Pipeline Trigger URL
+
+<img alt='Creating Webhooks' width='auto' height='auto' src='https://cdn.apito.io/media/apito_documentation/PPVS1LJSN9_graphqli_webhooks_create.png' />
+
+Click on the `CREATE HOOK` to create your trigger hook. Now each time your model updates, in this example `page` updates it will send a `POST` trigger to the URL with the `page` data
+in the request body as json.

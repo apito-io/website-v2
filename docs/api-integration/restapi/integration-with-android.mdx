@@ -1,0 +1,47 @@
+---
+sidebar_label: Android
+title: Apito REST API Integration with Android
+---
+<head>
+    <meta property="og:type" content="article" />
+</head>
+
+import ApiSecretNote from "./shared/api-secret-note.mdx"
+
+Use any lib of you choice we are choosing the most popular lib called `Retrofit` for this example.
+To add bearer token in retrofit, you have to create a class that implements Interceptor
+
+## Using Retrofit
+
+<ApiSecretNote />
+
+```java
+public class TokenInterceptor implements Interceptor{
+
+    @Override
+    public Response intercept(Chain chain) throws IOException {
+
+       //rewrite the request to add bearer token
+        Request newRequest=chain.request().newBuilder()
+                .header("Authorization","Bearer <API_SECRET>")
+                .build();
+
+        return chain.proceed(newRequest);
+    }
+}
+```
+Now add your Interceptor class in OKHttpClient object and add that obejct in Retrofit object:
+
+```java
+TokenInterceptor interceptor = new TokenInterceptor();
+
+OkHttpClient client = new OkHttpClient.Builder()
+.addInterceptor(interceptor).
+.build();
+
+Retrofit retrofit = new Retrofit.Builder()
+.client(client)
+.baseUrl("https://api.apito.com/secured/rest/project-id")
+.addConverterFactory(JacksonConverterFactory.create())
+.build();
+```

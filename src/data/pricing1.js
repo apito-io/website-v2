@@ -1,0 +1,96 @@
+export const PricingData1 = {
+    title: 'Flexible Pay Per Project Plan',
+    slogan: 'Pricing Plan',
+    plans : [
+        {
+            id: 1,
+            title: 'Free Forever',
+            description: 'For CMS, Blogs, Mobile Apps, IOT Projects',
+            features: [
+                '3 Projects',
+                '50K API Calls /Month/Project',
+                '200MB Media CDN',
+                '5GB Media Bandwidth',
+                'GraphQL API',
+                'Content Management API'
+            ],
+            price: {
+                monthly: 0,
+                monthly_discounted: 0,
+                yearly: 0,
+                yearly_discounted: 0,
+            },
+            buttonLabel: 'Start For Free',
+        },
+        {
+            id: 2,
+            title: 'Hobby Project',
+            description: `Best suited for Weekend & Hobby Projects`,
+            features: [
+                'Managed Database',
+                '1M API Calls/Month/Project',
+                '1GB Media CDN',
+                '10GB Media Bandwidth',
+                '5,000 Records',
+                'GraphQL API',
+                'RESTful API',
+                'Content Management API'
+            ],
+            price: {
+                monthly: 9.9,
+                monthly_discounted: 4.9,
+                yearly: 9.9 * 11,
+                yearly_discounted: 4.9 * 11,
+            },
+            buttonLabel: 'Start Building',
+        },
+        {
+            id: 3,
+            title: 'Pro',
+            description: `Best for Small Professional Teams & Startups`,
+            features: [
+                'Managed Database',
+                'Connect your own Database',
+                '2M API Calls /Month',
+                '2GB Media CDN',
+                '10,000 Records',
+                'Content Revision History',
+                'Save Content as Draft',
+                'GraphQL API',
+                'RESTful API',
+                'Content Management API',
+                'Support via Email',
+            ],
+            price: {
+                monthly: 14.9,
+                monthly_discounted: 9.9,
+                yearly: 14.9 * 11,
+                yearly_discounted: 9.9 * 11,
+            },
+            buttonLabel: 'Start Building',
+        },
+/*        {
+            id: 4,
+            title: 'Enterprise Setup',
+            description: `Best for Enterprise Use`,
+            features: [
+                'Highly Available',
+                'Managed Database',
+                'Connect your own Database',
+                'Option to Choose Datacenter',
+                'Dedicated Apito Instance Setup',
+                'Unlimited API Calls /Month',
+                'Unlimited Media CDN',
+                'Unlimited Records',
+                'GraphQL Server/API',
+                'RESTful API',
+                'Content Revision History',
+                'Save Content as Draft',
+                'Database Backup & Restore',
+                'Project Import & Export',
+                'Support via Email & Call',
+            ],
+            buttonLabel: 'Contact Us',
+        },*/
+    ]
+}

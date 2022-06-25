@@ -1,0 +1,33 @@
+---
+id: database-design
+sidebar_label: Database Design Intro
+title: Designing the Database for your Project
+
+image: 'https://cdn.apito.io/media/apito_documentation/XL8YIXTZO1_Apito_Console___Model.png'
+keywords: [database model, api design, api, database normalization, nosql, nosql database design]
+---
+<head>
+    <meta property="og:type" content="article" />
+</head>
+
+Database design or modeling is the most **crucial part of your project**. In this article there will be a brief introduction about when and when not to create a data model,
+and appreciate fundamental data design techniques. The primary audience for this article is application developers. We hope our guidance should help your to adopt an **Agile DB** for your Apito Project.
+
+A Model represents a Single Entity of your project. If you already know SQL then you can compare it to columns. For example if you are starting an e-commerce project the common models
+are mostly **Products**, **Orders**, **Stores**, **Users**, **Carts**, **Reports** etc.
+
+If you are designing a library management application the models are most likely to be **Books**, **Authors**, **Profile**, **Booking** etc.
+
+<img alt='Database Modeling' width='auto' height='auto' src='https://cdn.apito.io/media/apito_documentation/XL8YIXTZO1_Apito_Console___Model.png' />
+
+### Separation of Concern (Is it Model or Fields?)
+
+Sometimes designing a database could be challenging. For example if you are designing an Address Book API there might be **Profile**, **Address**, **User** model. You can notice here that
+**an address could also just be a field in Profile model or a Single separate model itself**.
+
+So how you define your model entirely depends on your project specification. Some rules you can follow to see if you assumption are right or not when you are creating a model.
+
+* One rule to define model would be, `if your entity contains multiple fields or complex then you can separate it into its own model`.
+* Another suggestion is to consider `if your entity is or will be connected to other entities`. For example, if we take the Address entity as example,
+if it will be connected to other entities then it should become a model or else you can just list it as a part of profile, as a dynamic list.
+

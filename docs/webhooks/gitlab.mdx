@@ -1,0 +1,48 @@
+---
+title: Auto Website Deployment via Gitlab Pipeline Trigger
+sidebar_label: Gitlab Trigger Pipeline
+id: website-deployment-using-gitlab-pipeline
+
+image: 'https://cdn.apito.io/media/apito_documentation/XL8YIXTZO1_Apito_Console___Model.png'
+keywords: [website deploy, auto deploy, gitlab, gitlab integration]
+---
+<head>
+    <meta property="og:type" content="article" />
+</head>
+
+If you are using Gitlab for your website or project repository, and you have your pipeline setup via `.gitlab-ci.yml` then you can use our webhook
+to auto trigger gitlab ci pipeline.
+
+First go to your project `Settings` > `CI/CD` and click on `Pipeline triggers` and create a trigger.
+
+<img alt='Gitlab Pipeline Trigger' width='auto' height='auto' src='https://cdn.apito.io/media/apito_documentation/RNVM3S57GY_gitlab_pipeline_trigger.png' />
+
+A Gitlab Pipeline trigger url looks like this,
+
+```
+    https://gitlab.com/api/v4/projects/<project_id>/trigger/pipeline?token=<token>&ref=<ref_name>
+```
+
+You have to replace:
+
+   * `<token>` with your trigger token.
+   * `<ref_name>` with a branch or tag name, like `main` or `master`.
+   * `<project_id>` with your project ID, like `123456`. The project ID is displayed at the top of every project’s landing page.
+
+
+## Add the Webhook in Apito
+
+Finally, add a webhook in the Apito Console using the url that you have build. To create a webhook you have to go to `Settings` in Apito Console then `Webhooks` from the left
+navigation bar and click `Create a Webhook`
+
+You  have to fill in:
+
+  * `Name` Name of the webhooks
+  * `Model` The model that the webhook will reflect to
+  * `Operation` Choose from which action you would like to trigger the webhook for
+  * `Webhook URL` The Gitlab Pipeline Trigger URL
+
+<img alt='Creating Webhooks' width='auto' height='auto' src='https://cdn.apito.io/media/apito_documentation/PPVS1LJSN9_graphqli_webhooks_create.png' />
+
+Click on the `CREATE HOOK` to create your trigger hook. Now each time your model updates, in this example `page` updates it will send a `POST` trigger to the URL with the `page` data
+in the request body as json.

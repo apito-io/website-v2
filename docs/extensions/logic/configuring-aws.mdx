@@ -1,0 +1,33 @@
+---
+title: Creating New AWS Access & Secret Key
+sidebar_label: Creating AWS IAM
+
+image: 'https://cdn.apito.io/media/apito_documentation/T4FOR5PY20_Creating_AWS_User_Accounts.png'
+keywords: [database model, api design, api, database normalization, nosql, nosql database design]
+---
+<head>
+    <meta property="og:type" content="article" />
+</head>
+
+Apito [AWS Lambda Function](/docs/extensions/logic/enable-lambda-extension) Extension needs Access and Secret Key in-order for your logic function to operate.
+You can use your old credential if you have any, but it is recommended to create a new IAM in AWS for apito.
+
+### Creating AWS Users for apito
+
+Login to AWS Console and navigate to IAM Section. Click on the `Users` from the Left side menu and click `Add user` button. Follow the steps below to create a new user
+
+1. Enter a **User name** and on **Access Type** select **Programmatic access** and click Next
+2. Set permissions by selecting `Attach existing policies directly` tab like below
+<img alt='Inspect a Role' width='auto' height='auto' src='https://cdn.apito.io/media/apito_documentation/T4FOR5PY20_Creating_AWS_User_Accounts.png' />
+3. Search for `lambda` permission and check `AWSLambda_FullAccess`. Click next
+4. Add your tags ( Skip it if you do not know what it is). Click next
+5. Click on `Create user` button
+
+Congratulation! You have successfully created a new user in AWS that has Lambda Access.
+
+:::note
+
+Be sure to save your `Access Key ID` and `Secret access key` to someplace safe.
+You need these two in-order to enable AWS Extension in apito.
+
+:::
