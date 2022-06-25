@@ -37,7 +37,7 @@ function Hello() {
         <Features features={HomePageData.features2} hideSection={true} />
         <Features features={HomePageData.features3} hideSection={true} />
 
-        <Databases data={HomePageData.databases} />
+        <Databases data={CommonData.databases} />
 
         <Footer />
       </ThemeProvider>

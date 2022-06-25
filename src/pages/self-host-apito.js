@@ -1,23 +1,21 @@
 import React from 'react';
-import {Fragment} from "react";
-import StickyHeader from "../components/header/sticky-header";
 import {ThemeProvider} from "theme-ui";
 import {themeSettings} from "../theme/theme-settings";
-import HeroBanner from "../components/hero-banner";
 import {HomePageData} from "../data/home";
 import Seo from "../components/seo";
-import SDKintegration from "../components/sdk-integration";
-import Communications from "../components/support";
 import Footer from "../components/footer/footer";
 import Features from "../components/features";
-import Projects from "../components/projects";
 import Layout from '@theme/Layout';
-import ExampleQueries from "../components/example-queries";
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Databases from "../components/databases";
+import "swiper/css";
+import "swiper/css/free-mode";
+import "swiper/css/navigation";
+import "swiper/css/thumbs";
 import {CommonData} from "../data/common";
-import {FooterData} from "../data/footer";
-import {BackendPageData} from "../data/backend-as-service";
+import FeatureBanner from "../components/feature-banner";
+import {SelfHostData} from "../data/self-host-apito";
+import HeroBanner from "../components/hero-banner";
 
 function Hello() {
 
@@ -32,18 +30,14 @@ function Hello() {
                 {/*overwrites title and include SEO*/}
                 <Seo data={CommonData.seo}/>
 
-                {/*                <StickyHeader/>*/}
-                <HeroBanner data={BackendPageData.header}/>
-                <ExampleQueries data={BackendPageData.exampleQueries}/>
-                <Features features={BackendPageData.features1} hideSection={true}/>
-
+                <HeroBanner data={SelfHostData.header}/>
+                <Features features={SelfHostData.features1} hideSection={true}/>
+               {/* <ExampleQueries data={HomePageData.exampleQueries}/>*/}
 
 
                 {/*<Projects data={HomePageData.projects} />*/}
-                <Features features={BackendPageData.features2} hideSection={true}/>
-                <Features features={BackendPageData.features3} hideSection={true}/>
-
-                <Databases data={CommonData.databases}/>
+                <Features features={SelfHostData.features2} hideSection={true}/>
+                <Features features={SelfHostData.features3} hideSection={true}/>
 
                 <Footer/>
             </ThemeProvider>
