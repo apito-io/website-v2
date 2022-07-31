@@ -1,5 +1,5 @@
 import React from 'react';
-import {ThemeProvider} from "theme-ui";
+import {Container, ThemeProvider} from "theme-ui";
 import {themeSettings} from "../theme/theme-settings";
 import {HomePageData} from "../data/home";
 import Seo from "../components/seo";
@@ -14,6 +14,9 @@ import "swiper/css/navigation";
 import "swiper/css/thumbs";
 import {CommonData} from "../data/common";
 import FeatureBanner from "../components/feature-banner";
+import SectionHeading from "../components/section-heading";
+import Accordion from "../components/rc-collapse/accordion";
+import {FAQData} from "../data/faq";
 
 function Hello() {
 
@@ -28,18 +31,10 @@ function Hello() {
                 {/*overwrites title and include SEO*/}
                 <Seo data={CommonData.seo}/>
 
-                {/*                <StickyHeader/>*/}
-                <FeatureBanner data={HomePageData.header} />
-                {/*<HeroBanner data={HomePageData.header}/>*/}
-                <Features features={HomePageData.features1} hideSection={true}/>
-               {/* <ExampleQueries data={HomePageData.exampleQueries}/>*/}
-
-
-                {/*<Projects data={HomePageData.projects} />*/}
-                <Features features={HomePageData.features2} hideSection={true}/>
-                <Features features={HomePageData.features3} hideSection={true}/>
-
-                <Databases data={CommonData.databases}/>
+                <Container sx={styles.container}>
+                    <SectionHeading title="Frequently Asked Questions" as={'h1'}/>
+                    <Accordion faqs={FAQData}/>
+                </Container>
 
                 <Footer/>
             </ThemeProvider>
@@ -48,3 +43,9 @@ function Hello() {
 }
 
 export default Hello;
+
+const styles = {
+    container: {
+        my: 100,
+    },
+};

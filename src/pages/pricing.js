@@ -14,6 +14,9 @@ import "swiper/css/navigation";
 import "swiper/css/thumbs";
 import {CommonData} from "../data/common";
 import FeatureBanner from "../components/feature-banner";
+import PricingPage from "../components/pricing";
+import {PricingData1} from "../data/pricing1";
+import {PricingData2} from "../data/pricing2";
 
 function Hello() {
 
@@ -28,18 +31,8 @@ function Hello() {
                 {/*overwrites title and include SEO*/}
                 <Seo data={CommonData.seo}/>
 
-                {/*                <StickyHeader/>*/}
-                <FeatureBanner data={HomePageData.header} />
-                {/*<HeroBanner data={HomePageData.header}/>*/}
-                <Features features={HomePageData.features1} hideSection={true}/>
-               {/* <ExampleQueries data={HomePageData.exampleQueries}/>*/}
-
-
-                {/*<Projects data={HomePageData.projects} />*/}
-                <Features features={HomePageData.features2} hideSection={true}/>
-                <Features features={HomePageData.features3} hideSection={true}/>
-
-                <Databases data={CommonData.databases}/>
+                <PricingPage data={PricingData1}/>
+                <PricingPage data={PricingData2}/>
 
                 <Footer/>
             </ThemeProvider>
