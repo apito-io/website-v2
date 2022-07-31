@@ -1,0 +1,69 @@
+---
+title: Calling Apito Cloud Function from API
+sidebar_label: Calling Apito Function
+
+image: 'https://cdn.apito.io/media/apito_documentation/G61YK74BWM_API_Credential___GraphQL_Explorer.png'
+keywords: [database model, api design, api, database normalization, nosql, nosql database design, cloud functions, aws lambda]
+---
+<head>
+    <meta property="og:type" content="article" />
+</head>
+
+Go to **API** from the top Navigation Bar and Click on the function that you want to connect from the left side menu.
+
+## Prerequisite
+1. Connected Apito Function
+
+## Calling via GraphQL Mutation
+
+```graphql
+mutation CallingCustomLogic {
+  saveSubscription(payload: {phone: "123456789"}) {
+    subscriber {
+      id
+      data {
+        phone
+      }
+    }
+  }
+}
+```
+Response
+```json
+{
+  "data": {
+    "saveSubscription": {
+      "subscriber": {
+        "data": {
+          "phone": "123456789"
+        },
+        "id": "06797356-b05b-434d-b9f0-459bc533d51c"
+      }
+    }
+  }
+}
+```
+
+## Calling via RESTful API
+
+```bash
+curl -X 'POST' \
+  'https://api.apito.io/secured/rest/project-id/system/function/saveSubscriptions' \
+  -H 'accept: application/json' \
+  -H 'Authorization: Bearer API_SECRET' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "phone": "01785986658"
+}'
+```
+
+```json
+{
+  "subscriber": {
+    "data": {
+      "phone": "01785986658"
+    },
+    "id": "e681ef81-3afc-4269-9332-6183a90c76b2"
+  }
+}
+```

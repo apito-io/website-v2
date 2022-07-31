@@ -1,0 +1,63 @@
+---
+sidebar_label: Golang
+title: GraphQL API Integration on a Golang Project
+---
+<head>
+    <meta property="og:type" content="article" />
+</head>
+
+import ApiSecretNote from "./shared/api-secret-note.mdx"
+
+There are many GraphQL client written in golang. `machinebox/graphql` is a Low-level GraphQL client for Go.
+
+This client is,
+1. Simple, familiar API
+2. Respects context.Context timeouts and cancellation
+3. Build and execute any kind of GraphQL request
+4. Use strong Go types for response data
+5. Use variables and upload files
+6. Simple error handling
+
+## Installation
+Make sure you have a working Go environment. To install graphql, simply run:
+
+```
+$ go get github.com/machinebox/graphql
+```
+
+## Usage
+
+<ApiSecretNote />
+
+```go
+import "context"
+
+// create a client (safe to share across requests)
+client := graphql.NewClient("https://api.apito.io/secured/graphql")
+
+// make a request
+req := graphql.NewRequest(`
+    query ($key: String!) {
+        items (id:$key) {
+            field1
+            field2
+            field3
+        }
+    }
+`)
+
+// set any variables
+req.Var("key", "value")
+
+// set header fields
+req.Header.Set("Authorization", "Bearer API_SECRET")
+
+// define a Context for the request
+ctx := context.Background()
+
+// run it and capture the response
+var respData ResponseStruct
+if err := client.Run(ctx, req, &respData); err != nil {
+    log.Fatal(err)
+}
+```

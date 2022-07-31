@@ -1,0 +1,54 @@
+---
+sidebar_label: Python
+title: GraphQL API Integration with Python Project
+---
+<head>
+    <meta property="og:type" content="article" />
+</head>
+
+import ApiSecretNote from "./shared/api-secret-note.mdx"
+
+This is a GraphQL client for Python 3.6+. Plays nicely with `graphene`, `graphql-core`, `graphql-js` and any other GraphQL implementation compatible with the spec.
+
+## Installation
+
+> **WARNING**: Please note that the following documentation describes the current version which is currently only available as a pre-release and needs to be installed with
+
+    $ pip install --pre gql[all]
+
+> **NOTE**: See also [the documentation](https://gql.readthedocs.io/en/latest/intro.html#less-dependencies) to install GQL with less extra dependencies
+
+
+<ApiSecretNote />
+
+### Basic usage
+
+```python
+from gql import gql, Client
+from gql.transport.aiohttp import AIOHTTPTransport
+
+# Select your transport with a defined url endpoint
+transport = AIOHTTPTransport(url="https://api.apito.io/secured/graphql", headers={'Authorization': 'Bearer API_SECRET'})
+
+# Create a GraphQL client using the defined transport
+client = Client(transport=transport, fetch_schema_from_transport=True)
+
+# Provide a GraphQL query
+query = gql(
+    """
+    query getContinents {
+      continents {
+        code
+        name
+      }
+    }
+"""
+)
+
+# Execute the query on the transport
+result = client.execute(query)
+print(result)
+```
+
+## Detailed Guide
+For a detailed guide, be sure to check out the official github page [here](https://github.com/graphql-python/gql)

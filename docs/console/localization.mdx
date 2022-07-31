@@ -1,0 +1,51 @@
+---
+id: adding-multilingual-support-to-your-api
+title: Adding Multilingual Support to your API
+sidebar_label: Content Localization
+
+image: 'https://cdn.apito.io/media/apito_documentation/8IMHNUYSH3_Apito_Console___Localization.png'
+keywords: [database model, api design, api, database normalization, nosql, nosql database design]
+---
+<head>
+    <meta property="og:type" content="article" />
+</head>
+
+Graphqli engine has build in support for content localization. Content localization now-a-days is a crucial part of content api.
+If your target audience speaks different languages then your content should be able to accommodate this.
+
+## Configuring Localization Add-Ons
+
+Go to **Settings > AddOns** and click `Config` on the `Localization` AddOns. You will see a Drawer pops up from the right. It looks similar to the picture below
+
+<img alt='Adding Localization' width='auto' height='auto' src='https://cdn.apito.io/media/apito_documentation/8IMHNUYSH3_Apito_Console___Localization.png' />
+
+Choose you locals one after another and click the button at the button called `Save`. Be sure to reload the page after doing so.
+
+## Configuring/Creating Localized Fields
+
+Now that you have added few locals from AddOns into your project you can configure your fields to adopt locals. It is very simple. While creating a fields simpley just check the box
+called `Enable Localization` and choose from the list of locals you have configured in the AddOns above. Whether you create or update your field you have now successfully configured
+locals for your particular field.
+
+![Graphqli Console - Field Localization](https://cdn.apito.io/media/apito_documentation/UGJTIDZ9TD_Apito_Console___Localizing_Fields.png)
+
+## Writing Multilingual Content
+Perquisite for writing Multilingual Content is
+1. Configuring Localization Add-Ons
+2. Configuring/Creating Localized Fields
+
+After you successfully configured your AddOns and Fields now you can go to the `Contents` from the top of the navigation and select your configured model. Then either publish or edit an
+existing content, you will see similar picture like below. In the picture you can see two tabs `English` & `Portuguese` because we configured our `Description` fields will be Multilingual
+and will have support for both of those languages. You can now switch tabs to write different content
+
+:::warning
+
+Always remember you can only update or publish content for one language at a time. For example. If you are publishing or editing a contents for both of the languages and during the
+update or publish you are in the `English` tab then only the changes made to english will be updated. if you made and changes to `Portuguese` content, it will be ignored.
+
+But to save both you have to switch tabs and click publish for each of them saperately.
+
+:::
+
+![Graphqli Console - Field Localization](https://cdn.apito.io/media/apito_documentation/0N274MDVYE_Multilingual_Content_Edit.png)
+

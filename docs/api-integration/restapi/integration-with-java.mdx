@@ -1,0 +1,22 @@
+---
+sidebar_label: Java
+title: Apito REST API Integration with Java
+---
+<head>
+    <meta property="og:type" content="article" />
+</head>
+
+import ApiSecretNote from "./shared/api-secret-note.mdx"
+
+Unirest is a lightweight HTTP client library from Mashape. Along with Java, it's also available for Node.js, .Net, Python, Ruby, etc.
+
+##  Using `Unirest` Library
+
+<ApiSecretNote />
+
+```java title="client.java"
+HttpResponse<String> response = Unirest.get("https://api.apito.io/secured/rest/project-id")
+  .header("content-type", "application/json")
+  .header("authorization", "Bearer API_SECRET")
+  .asString();
+```

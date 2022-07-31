@@ -1,0 +1,166 @@
+---
+id: vuejs-integration-with-graphql
+title: Integrate VueJS with Apito
+sidebar_label: VueJS
+
+image: 'https://vuejs.org/images/logo.png'
+keywords: [database model, api design, api, database normalization, nosql, nosql database design]
+---
+<head>
+    <meta property="og:type" content="article" />
+</head>
+
+According to the offical doc Vue (pronounced /vjuː/, like view) is a progressive framework for building user interfaces.
+
+Unlike other monolithic frameworks, Vue is designed from the ground up to be incrementally adoptable. The core library is focused on the view layer only,
+and is easy to pick up and integrate with other libraries or existing projects. On the other hand, Vue is also perfectly capable of powering sophisticated
+Single-Page Applications when used in combination with modern tooling and supporting libraries.
+
+This doc is transformed from the vuejs official installation page [here](https://apollo.vuejs.org/guide/installation.html#installation)
+
+In your vue-cli 3 project:
+
+```shell
+vue add apollo
+```
+
+# Manual installation
+
+## 1. Apollo Client
+
+You can either use Apollo Boost or Apollo Client directly (more configuration work).
+
+### Apollo Boost
+
+Apollo Boost is a zero-config way to start using Apollo Client. It includes some sensible defaults, such as our recommended InMemoryCache and HttpLink,
+which come configured for you with our recommended settings and it's perfect for starting to develop fast.
+
+Install it alongside vue-apollo and graphql:
+```
+npm install --save vue-apollo graphql apollo-boost
+```
+Or:
+```
+yarn add vue-apollo graphql apollo-boost
+```
+In your app, create an ApolloClient instance:
+
+```javascript
+import ApolloClient from 'apollo-boost'
+
+const apolloClient = new ApolloClient({
+    // You should use an absolute URL here
+    uri: 'https://api.apito.io/secured/graphql',
+    headers: {
+        Authorization: `Bearer API_SECRET`,
+    },
+})
+```
+#### Apollo client full configuration
+
+If you want some more fine grained control install these packages instead of apollo-boost:
+
+npm install --save vue-apollo graphql apollo-client apollo-link apollo-link-http apollo-cache-inmemory graphql-tag
+Or:
+
+yarn add vue-apollo graphql apollo-client apollo-link apollo-link-http apollo-cache-inmemory graphql-tag
+In your app, create an ApolloClient instance:
+
+```javascript
+import { ApolloClient } from 'apollo-client'
+import { createHttpLink } from 'apollo-link-http'
+import { InMemoryCache } from 'apollo-cache-inmemory'
+
+// HTTP connection to the API
+const httpLink = createHttpLink({
+  // You should use an absolute URL here
+  uri: 'http://localhost:3020/graphql',
+})
+
+// Cache implementation
+const cache = new InMemoryCache()
+
+// Create the apollo client
+const apolloClient = new ApolloClient({
+  link: httpLink,
+  cache,
+})
+```
+
+## 2. Install the plugin into Vue
+
+```javascript
+import Vue from 'vue'
+import VueApollo from 'vue-apollo'
+
+Vue.use(VueApollo)
+```
+
+
+## 3. Apollo provider
+
+The provider holds the Apollo client instances that can then be used by all the child components.
+
+```javascript
+const apolloProvider = new VueApollo({
+    defaultClient: apolloClient,
+})
+```
+Add it to your app with the apolloProvider option:
+
+```javascript
+new Vue({
+  el: '#app',
+  // inject apolloProvider here like vue-router or vuex
+  apolloProvider,
+  render: h => h(App),
+})
+```
+You are now ready to use Apollo in your components!
+
+# IDE integration
+
+## Visual Studio Code
+If you are using VS Code, it's recommended to install the Apollo GraphQL extension (opens new window).
+
+Then configure it by creating a apollo.config.js file in the root folder of the Vue project:
+
+```javascript title='apollo.config.js'
+module.exports = {
+  client: {
+    service: {
+      name: 'my-app',
+      // URL to the GraphQL API
+      url: 'http://localhost:3000/graphql',
+    },
+    // Files processed by the extension
+    includes: [
+      'src/**/*.vue',
+      'src/**/*.js',
+    ],
+  },
+}
+```
+
+## Webstorm
+If you are using Webstorm, it's recommended to install the JS GraphQL extension (opens new window).
+
+Then configure it by creating a .graphqlconfig file in the root folder of the Vue project:
+
+```json
+{
+  "name": "Untitled GraphQL Schema",
+  "schemaPath": "./path/to/schema.graphql",
+  "extensions": {
+    "endpoints": {
+      "Default GraphQL Endpoint": {
+        "url": "http://url/to/the/graphql/api",
+        "headers": {
+          "user-agent": "JS GraphQL"
+        },
+        "introspect": false
+      }
+    }
+  }
+}
+```

@@ -1,0 +1,32 @@
+---
+sidebar_label: Ruby
+title: Apito REST API Integration with Ruby Project
+---
+<head>
+    <meta property="og:type" content="article" />
+</head>
+
+import ApiSecretNote from "./shared/api-secret-note.mdx"
+
+Net/HTTP is a default Ruby class. It is most of the time used along with URI.
+
+<ApiSecretNote />
+
+```ruby
+require 'uri'
+require 'net/http'
+require 'openssl'
+
+url = URI("https://api.apito.io/secured/rest/project")
+
+http = Net::HTTP.new(url.host, url.port)
+http.use_ssl = true
+http.verify_mode = OpenSSL::SSL::VERIFY_NONE
+
+request = Net::HTTP::Get.new(url)
+request["content-type"] = 'application/json'
+request["authorization"] = 'Bearer API_SECRET'
+
+response = http.request(request)
+puts response.read_body
+```

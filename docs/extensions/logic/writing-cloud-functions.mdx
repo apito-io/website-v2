@@ -1,0 +1,28 @@
+---
+id: writing-cloud-functions
+title: Writing Cloud Functions & Extending your API
+sidebar_label: Writing Cloud Functions
+
+image: 'https://cdn.apito.io/media/apito_documentation/RYZ8GISWTN_Apito_Console___AWS_Credentials.png'
+keywords: [database model, api design, api, database normalization, nosql, nosql database design]
+---
+<head>
+    <meta property="og:type" content="article" />
+</head>
+
+Apito is very extensible. You can extend your api or write your own endpoint on apito using custom function that can hold your custom logic & integration.
+
+So far Apito Generates all the CRUD(Create, Read, Update, Delete) API instantly based on your model but what happens when you need to make a custom request or need to
+**execute a business logic** or need to **connect to any third-party api?**
+
+
+## Supported Cloud Provider
+
+* AWS Lambda
+
+:::note
+Apito doesn't host any functions on our server. It depends on third party function host provider (AWS, Google etc..)
+:::
+
+Apito will Connect your `Apito Function` to your `AWS Lambda functions`. Each function you create here should be connected to a separate AWS Lambda function in-order to
+operate.

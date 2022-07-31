@@ -1,0 +1,47 @@
+---
+sidebar_label: Javascript
+title: Apito REST API Integration with Javascript Project
+---
+<head>
+    <meta property="og:type" content="article" />
+</head>
+
+import ApiSecretNote from "./shared/api-secret-note.mdx"
+
+<ApiSecretNote />
+
+## Using `Axios`
+
+Axios: Axios is a Javascript library used to make HTTP requests from node. js or XMLHttpRequests from the browser,
+and it supports the Promise API that is native to JS ES6. It can be used intercept HTTP requests and responses and
+enables client-side protection against XSRF. It also has the ability to cancel requests.
+
+```javascript
+const token = 'apito-api-secret';
+axios.get('https://api.apito.io/secured/rest/project', {
+  headers: {
+    'Authorization': `Bearer ${token}`
+  }
+})
+.then((res) => {
+  console.log(res.data)
+})
+.catch((error) => {
+  console.error(error)
+})
+```
+
+## Using `Fetch`
+
+The Fetch API provides a JavaScript interface for accessing and manipulating parts of the HTTP pipeline, such as requests and responses.
+It also provides a global fetch() method that provides an easy, logical way to fetch resources asynchronously across the network.
+
+```javascript
+const token = 'apito-api-secret';
+fetch('https://api.apito.io/secured/rest/project', {
+  headers: {
+    Authorization: `Bearer ${token}`
+  }
+}).then(res => res.json())
+  .then(json => console.log(json));
+```

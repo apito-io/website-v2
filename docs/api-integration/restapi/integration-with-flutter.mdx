@@ -1,0 +1,26 @@
+---
+sidebar_label: Flutter
+title: Apito REST API Integration with Flutter
+---
+<head>
+    <meta property="og:type" content="article" />
+</head>
+
+import ApiSecretNote from "./shared/api-secret-note.mdx"
+
+Dart has a composable, Future-based library for making HTTP requests. You can simply use this to connect with apito's rest api endpoints.
+Here is an example below
+
+## Using Dart's standard `http` library
+
+<ApiSecretNote />
+
+```dart
+    String token = '<API_SECRET>';
+    final response = await http.get(url, headers: {
+      'Content-Type': 'application/json',
+      'Accept': 'application/json',
+      'Authorization': 'Bearer $token',
+    });
+    print(response);
+```

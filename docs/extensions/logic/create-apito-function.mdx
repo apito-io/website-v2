@@ -1,0 +1,35 @@
+---
+title: Create a New Apito Cloud Function
+sidebar_label: Create an Apito Function
+
+image: 'https://cdn.apito.io/media/apito_documentation/MRQOVLHRGR_Apito_Console___Add_A_Function.png'
+keywords: [database model, api design, api, database normalization, nosql, nosql database design, cloud functions, aws lambda]
+---
+<head>
+    <meta property="og:type" content="article" />
+</head>
+
+Go to **Logic** from the top Navigation Bar and Click **ADD A FUNCTION** from the left side menu. You will see the **Create an Apito Function** Page like below
+
+<img alt='Add A Function' width='auto' height='auto' src='https://cdn.apito.io/media/apito_documentation/MRQOVLHRGR_Apito_Console___Add_A_Function.png' />
+
+Set your `Request Parameter` and `Response Parameter` and click `CREATE` button.
+
+
+## Request & Response Parameter
+
+**Request Parameter** is what Apito will pass to your cloud function when it will send request to your connected function.
+**Response Parameter** is what you are supposed to pass at the end of your function while you are writing the code
+
+## Disconnected Function
+
+The first time you create a function in apito, it is considered as a disconnected function because apito doesn't host any function on its server. It depends on a cloud provider
+for its function execution power.
+
+Click on the function you just created, and you can see something like below.
+
+<img alt='Disconnect a Function' width='auto' height='auto' src='https://cdn.apito.io/media/apito_documentation/11RSB62CD0_Apito_Console___Disconnected_Function.png' />
+
+## Connected Function
+
+When you connect your Apito Function to a Cloud Provider it's a Connected Function. To read more about Connected Function [go here](/docs/extensions/logic/connecting-function)
