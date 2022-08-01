@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkapito_website_v_2=self.webpackChunkapito_website_v_2||[]).push([[7826],{59828:e=>{e.exports=JSON.parse('{"permalink":"/blog/tags/fahim","page":1,"postsPerPage":10,"totalPages":1,"totalCount":3,"blogDescription":"Blog","blogTitle":"Blog"}')}}]);

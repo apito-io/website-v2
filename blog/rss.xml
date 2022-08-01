@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+    <channel>
+        <title>API Driven Extensible Headless CMS Blog</title>
+        <link>https://apito.io/blog</link>
+        <description>API Driven Extensible Headless CMS Blog</description>
+        <lastBuildDate>Thu, 03 Mar 2022 00:00:00 GMT</lastBuildDate>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>https://github.com/jpmonette/feed</generator>
+        <language>en</language>
+        <item>
+            <title><![CDATA[Build API Easily on Cloud using Apito]]></title>
+            <link>https://apito.io/blog/build-api-easily-on-cloud-using-apito</link>
+            <guid>build-api-easily-on-cloud-using-apito</guid>
+            <pubDate>Thu, 03 Mar 2022 00:00:00 GMT</pubDate>
+            <description><![CDATA[Apito is a Cloud based Service that helps you build API easily. You can think of it as a firebase alternative.]]></description>
+            <content:encoded><![CDATA[<p>Apito is a Cloud based Service that helps you build API easily. You can think of it as a firebase alternative.
+This guide will show you how you can use Apito to build API for your next project or application.</p><p><img loading="lazy" src="https://cdn.apito.io/media/apito_documentation/2K07YCORYV_Apito_Console.png" alt="Apito Console" class="img_ev3q"></p><p>If you havent already created an account in apito please go to <a href="https://app.apito.io" target="_blank" rel="noopener noreferrer">this link</a> and create one.
+Once you logged in to <code>Apito Console</code> you will a Project Space like above. You can use this space to switch between
+your projects or create a new one.</p><p>Now, for this quick started guide I will be creating an API for an ecommerce project, so lets gets started.</p><h2 class="anchor anchorWithStickyNavbar_LWe7" id="1-create-your-project">1. Create your project<a class="hash-link" href="#1-create-your-project" title="Direct link to heading">​</a></h2><p>Click on the Start a new Project button to initialize your project creation. Enter your project name and description
+and click Continue. On the next page select Apito Cloud option to create your project faster. Other Database
+options will soon be available. Congratulation! you project is being build. Once it’s done you can click
+Explore new project to switch to your newly created project and start building your API instantly.</p><p><img loading="lazy" src="https://cdn.apito.io/media/apito_documentation/NW09WSY56N_Create_Project.png" alt="Apito Create a Project" class="img_ev3q"></p><p>The first step after creating your project is to define your project models. The most important part of designing an
+API is Database Modeling. Let’s start by creating our first model. We all know Products and categories are a crucial part of an ecommerce API.</p><h2 class="anchor anchorWithStickyNavbar_LWe7" id="2-model-your-database-with-models--fields">2. Model your Database with models &amp; fields<a class="hash-link" href="#2-model-your-database-with-models--fields" title="Direct link to heading">​</a></h2><p>Click on the Models Tab in the top navigation menu. Then from the left side bar, click on Add a model button.
+Now, write down the name of the model, in our case it will be product. Now click on the create button.</p><p><img loading="lazy" src="https://cdn.apito.io/media/apito_documentation/OUHYWT8VH4_Create_Model.png" alt="Database Model Creation" class="img_ev3q"></p><p>Next, we will add few fields to our newly created product model.</p><h3 class="anchor anchorWithStickyNavbar_LWe7" id="fields">Fields<a class="hash-link" href="#fields" title="Direct link to heading">​</a></h3><p>To add fields to a model click on the Add a Field button. First, we will add a title field of
+type text and we will set the attribute of the title to required. Then, a description field of type, Rich Text.
+An Image field of type, Media. A Price field of type, Number. And last but not least a Rating field of type, Number.
+Now let’s create another model named Category and add few fields in it. Those fields will be name, label and icons.
+Apito model &amp; field builder is very versatile you can use it to design complex and nested model structure.</p><h3 class="anchor anchorWithStickyNavbar_LWe7" id="relations">Relations<a class="hash-link" href="#relations" title="Direct link to heading">​</a></h3><p>Next, we will create relations between them. For that you need to click on the
+Add Field Button and then select Relations. Your relation creation between models depends on your project requirements.</p><p><img loading="lazy" src="https://cdn.apito.io/media/apito_documentation/G7NHVB7U6I_Add_Fields.png" alt="Database Relations" class="img_ev3q"></p><p>For now, let’s say, Product has many categories and categories has many products. Wow, as you can see, how easy it is to create entity relations between models in apito.
+Also, you can rename, delete and create fields &amp; relations anytime you want. Now, that our database design of product and category model with relation is created,
+we are ready to insert some contents.</p><h2 class="anchor anchorWithStickyNavbar_LWe7" id="3-insert-your-content">3. Insert your content<a class="hash-link" href="#3-insert-your-content" title="Direct link to heading">​</a></h2><p>Click on the Contents tab and select your model. As you can see, Table and forms are auto generated based on your database model design.
+Let me insert few products and categories into our database. To add a new product, click on the Add a new product button, which is on the right side of the product content table.
+You will be able to see a drawer pops up from the right side of our table, which contains an auto generated specialized input form based on your model design.</p><p><img loading="lazy" src="https://cdn.apito.io/media/apito_documentation/JB6YZSJ7ZE_Add_A_Content.png" alt="Content Management" class="img_ev3q"></p><p>Let’s add our first product using this form into our database. Let’s add our first category into our database.
+As you can see while creating a category you can directly tag products with it. As you can see that product and category are now linked with each other.</p><h2 class="anchor anchorWithStickyNavbar_LWe7" id="4-explore-both-graphql--rest-api">4. Explore Both GraphQL &amp; REST API<a class="hash-link" href="#4-explore-both-graphql--rest-api" title="Direct link to heading">​</a></h2><p>Our Ecommerce API is ready. To explore our API lets goto the <code>API Explorer</code> from the top of the navigation menu. As you can see, our GraphQL &amp; REST API is ready for use.
+Let’s run our first query. We will now <code>Search a product that contains blue in its name</code>. Now click Run and as you can see its working! our ecommerce API is ready for integration.</p><p><img loading="lazy" src="https://cdn.apito.io/media/apito_documentation/0X6Z0YYA1V_GraphQL_Explorer.png" alt="GraphQL Explorer" class="img_ev3q"></p><p>You can also use REST API if you project requires it. Apito Generates a Swagger Documentation which is compatible with OpenAPI.</p><p><img loading="lazy" src="https://cdn.apito.io/media/apito_documentation/09SNMJMSIX_RESTful_API_Explorer.png" alt="Swagger UI" class="img_ev3q"></p>]]></content:encoded>
+            <category>fahim</category>
+        </item>
+        <item>
+            <title><![CDATA[REST API vs GraphQL | Why not Both!]]></title>
+            <link>https://apito.io/blog/rest-api-vs-graphql-a-detailed-comparison</link>
+            <guid>rest-api-vs-graphql-a-detailed-comparison</guid>
+            <pubDate>Tue, 08 Feb 2022 00:00:00 GMT</pubDate>
+            <description><![CDATA[Recently GraphQL is becoming the buzzword in the developer community. Although building a GraphQL server was very]]></description>
+            <content:encoded><![CDATA[<p>Recently GraphQL is becoming the buzzword in the developer community. Although building a GraphQL server was very
+difficult in the past, nowadays with overall community support and developer tools, I can say it's rather very
+easy to build one than to build an old-fashioned Rest API.</p><p>When it comes to choosing which protocol to choose for your next project, nowadays people often get confused between
+Rest API &amp; GraphQL, I say, don't get confused and it depends. There are many aspects where using GraphQL is
+overkill and many cases where GraphQL will thrive over REST API. Let's discuss what's what throughout the post</p><hr><p>Let's discuss what's what throughout the post</p><hr><hr><p>REST has some limitations.</p><ol><li>REST is rigid, requiring different endpoints for different responses.</li><li>Teams with back-end and front-end devs need to coordinate any change, increasing the complexity of the
+development effort</li><li>Endpoints have a predefined response - often returning more data than needed and consuming precious bandwidth. </li></ol><p>Let's talk about the REST API first and why it's awesome!</p>]]></content:encoded>
+            <category>fahim</category>
+        </item>
+        <item>
+            <title><![CDATA[Firebase vs Apito a Quick Comparison]]></title>
+            <link>https://apito.io/blog/firebase-vs-apito-quick-comparison</link>
+            <guid>firebase-vs-apito-quick-comparison</guid>
+            <pubDate>Sun, 12 Sep 2021 00:00:00 GMT</pubDate>
+            <description><![CDATA[Internet is filled with tons of articles and tutorials that talk about building production-ready and scalable apps]]></description>
+            <content:encoded><![CDATA[<p>Internet is filled with tons of articles and tutorials that talk about building production-ready and scalable apps
+for both web and mobile. Developers often time get caught up trying to apply the same principle or guide but often time
+they ended up "re-inventing the wheel" Apito and Firebase both come with Backend as a Service (BaaS) APIs that help
+you develop your application faster. A key component of any BaaS is instant APIs over a database </p><ul><li>once you define your database schema, you should get data APIs instantly.</li></ul><h2 class="anchor anchorWithStickyNavbar_LWe7" id="comparing-apples-to-applesauce">Comparing Apples to Applesauce<a class="hash-link" href="#comparing-apples-to-applesauce" title="Direct link to heading">​</a></h2><p>Apito and Firebase both offer APIs over a database while both of them provide this solution on top of a proprietary
+database. We use nn optimized version of RocksDB. Soon Apito will be able to connect to several popular choices of
+databases including PostgreSQL, MySQL, Mariadb, Mongodb &amp; ArangoDB. That is a topic of another discussion.</p><p>Firebase was originally designed exclusively as a realtime database. If your project does not need a real-time database
+then using it is exteamly difficult for modern application development. </p><p>Let me tell you why, </p><p>Querying &amp; Filtering your data is very difficult with Firebase, wherewith Apito you can execute bulk queries with complex
+filters ( even geospatial queries ) Also, Once an application is in production, you will need to write complex queries,
+especially for the purpose of Analytics or Business Intelligence. With Firebase, you are restricted to basic CRUD queries.
+This is okay for rapid prototyping but does not lend itself to a production app.</p><h3 class="anchor anchorWithStickyNavbar_LWe7" id="database-design-migration--content-management">Database Design, Migration &amp; Content Management<a class="hash-link" href="#database-design-migration--content-management" title="Direct link to heading">​</a></h3><p>This is probably one of the biggest gripes power users have with Firebase. On Firebase, you can only change data from
+the client-side. This means you have to write a script to perform a schema evolution (which is error-prone and
+risky if not performed in a transaction, or in sets of transactions) or handle the schema evolution in the app code
+itself! </p><p>But on the other hand, On Apito, Migration happens instantly once you modify your model and publish it. This is similar
+to the natural developer workflow of taking changes in dev and then applying them in staging/production environments.</p><h3 class="anchor anchorWithStickyNavbar_LWe7" id="data-modeling">Data modeling<a class="hash-link" href="#data-modeling" title="Direct link to heading">​</a></h3><p>Thanks to Apito's Versatile Model Builder, it supports various fields to model and structures your project,
+for example, Single Line Text Field, Date Field, Number Field, Fields within Fields ( Array of Object) and
+the Most important feature is the relation between models ( One-to-One, One-to-Many, Many-to-Many )
+It is harder to model relationships between independent data models with Firebase's proprietary database
+(originally a realtime database). If you made a mistake early on in your modelling, migrating and changing
+to a new data model is hard.</p><h3 class="anchor anchorWithStickyNavbar_LWe7" id="role-based-permissions">Role based Permissions<a class="hash-link" href="#role-based-permissions" title="Direct link to heading">​</a></h3><p>Firebase permissions can only capture rules based on the data within the current 'path' (node). </p><p>On Apito, you can specify granular permissions based on roles. That can be attatched to any API endpoints &amp; models.
+<a href="/docs/console/adding-rbac-role-based-permissions-support-to-your-api">Read more here.</a></p><h3 class="anchor anchorWithStickyNavbar_LWe7" id="a-back-end-for-saas-apps">A Back-end for SaaS Apps<a class="hash-link" href="#a-back-end-for-saas-apps" title="Direct link to heading">​</a></h3><p>Firebase is a well-known backend-as-a-service. It has a ton of useful features that can all be tuned and tweaked to power
+the back-end of a SaaS application. That said, they've made a much larger effort to be the cloud back-end for mobile apps.
+As a developer building SaaS, you can configure Firebase services to suit your requirements, but it's always going to
+be extra work. With Apito, that's pretty different. 8base designed its platform to best accommodate SaaS apps from day
+one; with a GraphQL API for any web-client, or mobile, to consume. This naturally makes it ideal for developers
+looking for a backend-as-a-service on any SaaS project. Why? Because things like authorization, multi-tenancy,
+user administration, and a relational schema builder are all native to the platform.</p><h2 class="anchor anchorWithStickyNavbar_LWe7" id="to-summarize-our-points-apito-has-many-advantages-including">To summarize our points, Apito has many advantages including<a class="hash-link" href="#to-summarize-our-points-apito-has-many-advantages-including" title="Direct link to heading">​</a></h2><ul><li>Easy Learning Curve</li><li>Versatile Database Modeling</li><li>Robust Content Management System</li><li>Complex Query &amp; Filtering</li><li>Role based Permissions</li><li>Build In Support for Multilingual Content</li><li>Instant GraphQL &amp; REST API Endpoints</li><li>Webhooks</li><li>Authentication Module</li><li>Cloud Functions</li></ul><p><img loading="lazy" src="https://cdn.apito.io/media/apito_documentation/XJUZG5CEW9_Apito_Vs_Firebase.png" alt="Apito vs Firebase Comparison" class="img_ev3q"></p><h3 class="anchor anchorWithStickyNavbar_LWe7" id="graphql-or-restful-api-why-not-both">GraphQL or RESTful API? Why not Both?<a class="hash-link" href="#graphql-or-restful-api-why-not-both" title="Direct link to heading">​</a></h3><p>Today, almost all apps are data-driven. Making sure a developer has access to the data they need when they need it, and
+as they need it, is super important. For the past decade, REST has been the API standard. While the world has benefited
+hugely from REST, it has some limitations. GraphQL, on the other hand, comes with some huge advantages when compared
+to REST. A single endpoint can support any query or mutation (a.k.a. update). </p><p>Queries get defined on the client-side, meaning no more endpoint updates done by backend developers.
+Queries only return data that the developer wants.
+Out of the box, Firebase lets users build REST endpoints. You can set up a GraphQL engine on Firebase, but it takes a lot of time and a lot of know-how.</p><h3 class="anchor anchorWithStickyNavbar_LWe7" id="role-based-security">Role-Based Security<a class="hash-link" href="#role-based-security" title="Direct link to heading">​</a></h3><p>Meanwhile, as everyone is out there building the sleekest, and most straightforward user interface that enchants
+the pants off users, app security is too often being overlooked. That's why Firebase and Apito have security built
+directly into their products. Firebase offers the ability to set up role-based security using custom functions that
+get stored as rules. Every rule is then validated against each API requests. </p><p>The developer can define all their custom authentication logic. Apito built role-based security directly into its
+platform, and expose that to developers through a configurable interface. It makes adding permissions and roles for
+specific actions on specific tables and fields super straight forward. It also supports role-based scoping of records
+using custom filters. Pretty much, if developers follow either platform's documentation around how to set up
+authorization, they won't have to worry about security. It's just up to them how long they want to take to get there.</p><h3 class="anchor anchorWithStickyNavbar_LWe7" id="conclusion">Conclusion<a class="hash-link" href="#conclusion" title="Direct link to heading">​</a></h3><p>There are millions of developers in the world, each with their nuanced preferences to specific stacks and tools.
+In the greater software ecosystem, 1000s of tools and services exist to help support developers in building amazing
+apps. Of all the tools, services, frameworks, platforms, and specifications, only a few stand out. </p><p>Apito gives developers a back-end they need when building modern apps, the way that they would have wanted to build it themselves.
+By configuring dozens of clutch back-end resources and offering them as a production-ready platform, you can easily write
+your project-specific business logic with cloud function Knowing the whole time that security, scalability, database management,
+and the like are future proof.</p><p>A developer is going to come across both Apito and Firebase when researching backend-as-a-service platforms. Both
+platforms are going to offer them similar features that are backed by different implementations. That said, the experience
+that the developer has when using either platform is the real acid test.</p>]]></content:encoded>
+            <category>fahim</category>
+        </item>
+    </channel>
+</rss>
