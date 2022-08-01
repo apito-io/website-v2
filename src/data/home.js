@@ -7,7 +7,7 @@ export const HomePageData = {
       "https://cdn.apito.io/media/shikho_website_v2_8ma77/IN1TXKJPX5_Apito_Console___API.png",
     ],
     description:
-      "The Most Powerful Headless CMS for Your Content with CDN, Webhooks, Team Collaborations, Content Revision, Cloud Functions and Much more",
+      "The Most Powerful Headless Content Management as a Service with CDN, Webhooks, Team Collaborations, Content Revision, Cloud Functions and Much more",
     button: {
       label: "Start A Project",
       link: "/docs/build-api-quick-start-guide",
