@@ -2,6 +2,7 @@ import React from 'react';
 import {ThemeProvider} from "theme-ui";
 import {themeSettings} from "../theme/theme-settings";
 import {HomePageData} from "../data/home";
+import DocusaurusHead from "@docusaurus/Head"
 import Seo from "../components/seo";
 import Footer from "../components/footer/footer";
 import Features from "../components/features";
@@ -24,6 +25,11 @@ function Hello() {
         <Layout
             title={`${siteConfig.title}`}
             description={`${siteConfig.tagline}`}>
+
+            <DocusaurusHead>
+                <script type="text/javascript" src="/script/chat.js" />
+            </DocusaurusHead>
+
             <ThemeProvider theme={themeSettings}>
                 {/*overwrites title and include SEO*/}
                 <Seo data={CommonData.seo}/>
