@@ -28,6 +28,7 @@ function Hello() {
 
             <DocusaurusHead>
                 <script type="text/javascript" src="/script/chat.js" />
+                <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "b1cc8899676e4f5c9a1fdf503093e3fd"}'></script>
             </DocusaurusHead>
 
             <ThemeProvider theme={themeSettings}>
