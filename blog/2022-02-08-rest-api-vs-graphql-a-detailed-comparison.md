@@ -101,3 +101,108 @@ and slows down the product development process.
 
 With GraphQL's flexibility without requiring additional server effort. Clients may declare their specific data needs, 
 thus there is no need to modify the backend when the design or data requirements on the frontend change.
+
+# Schema Stitching
+
+The capability of stitching schemas is a significant differentiator. To make numerous schemas accessible to the client, 
+GraphQL may merge them into a single schema. For instance, combining the Burgers API and Nutrition API schemas by 
+combining the information from several sources about a certain menu item's nutrition information.
+
+```graphql
+{
+  books(
+      where: { name: "harry"}
+  )
+  # from Menu endpoint
+  title 
+  description 
+  price 
+  # from Recommendation endpoint
+  similar {
+      books {
+          id
+          title
+      }
+  }
+  # from Order endpoint
+  inStock
+}
+```
+
+# GraphQL vs. REST
+
+The primary distinction between GraphQL and REST APIs is that the former is an architectural framework for network-based applications, 
+while the latter is a query language standard.
+
+Strongly typed GraphQL is ideal for reducing development time since it interacts with code generation tools, 
+is self-documenting based on schema types and descriptions, and is strongly typed.
+
+In very basic terms, the ordering of hamburgers can help us understand one of the most well-known distinctions: the 
+variations in expected answers to inquiry. Although the GraphQL burger meme has been around for a while, the explanation it 
+offers still makes the fundamentals easy to understand.
+
+```
+https://api.com/cheeseburger/
+```
+
+You may "have it your way" using GraphQL by expressing how you want that cheeseburger to be made. You may now order a cheeseburger 
+(reaction) without a bottom bun, with a bun on top, a patty, pickle, onion, and cheese (unless you're vegan).
+
+```graphql
+query getCheeseburger ($vegan: Boolean) {
+  cheeseburger {
+    bun
+    patty
+    pickle
+    onion
+    cheese @skip(if: $vegan)
+  }
+}
+```
+
+Your GraphQL answer is formatted and scaled precisely as you specify. Nothing more, nothing less, and nothing different about your 
+response from what you asked for or desired.
+
+# Conclusion
+
+For network-based applications, a REST API is a "architectural notion." On the other side, GraphQL is a query language and 
+collection of tools that work with just one endpoint. Additionally, during the past several years, REST has been utilized to 
+create new APIs, whereas GraphQL has been primarily focused on performance and flexibility optimization.
+
+You would most likely receive whole "datasets" as a response while utilizing REST. You would need to make `x` REST API queries 
+in order to get information from `x` objects. Your inquiries may take the following form if you're looking for product details 
+for a menu website:
+
+Request menu for burger names, descriptions, ingredients, etc. in one request in another Request prices for prices pertaining to 
+that menu and in another request images for menu shots from another dataset... and so on
+
+In contrast, if you wanted to gather data from a particular endpoint, you couldn't restrict the fields that the REST API returned 
+since, when used without further parameters, it always overfetches the whole data set.
+
+The request may be tailored to exactly what you need, from many objects down to individual fields inside each entity, 
+using GraphQL's query language. GraphQL would require the x endpoint, and it can do a lot with that data, but you must first 
+specify your goals for it.
+
+The request would be limited to getting the same endpoint's menuItem, menuIngredients, menuImage, and menuPrice in a single 
+request, using the same example. The database's other material wouldn't be returned
+
+Similar to the earlier burger analogy, GraphQL allows you to customize the cheeseburger you receive through REST to include 
+exactly the amount of your choice of toppings.
+
+Choosing GraphQL over REST or in conjunction with it is a very individualized choice that is greatly impacted by the use-case. 
+It's crucial to remember that GraphQL is neither a substitute for REST nor an alternative. Here are some crucial distinctions 
+to assist make that choice easier:
+
+
+| GraphQL      | REST |
+| ----------- | ----------- |
+| A query language for solving common problems when integrating APIs      | An architectural style largely viewed as a conventional standard for designing APIs       |
+| Deployed over HTTP using a single endpoint that provides the full capabilities of the exposed service   | Deployed over a set of URLs where each of them exposes a single resource |
+| Client-driven architecture   | Server-driven architecture        |
+| Uses caching automatically   | Lacks in-built caching mechanism        |
+| Better API versioning System   | Complicated API version Support        |
+| Response supports only JSON   | XML, JSON, and YAML        |
+| Offers type-safety and auto-generated documentation   | Doesn't offer type-safety or auto-generated documentation        |
+| Allows for schema stitching and remote data fetching   | Simplifying work with multiple endpoints requires expensive custom middleware        |
+| Build in Validation based on Schema   | No Build In Validation        |
+| Single Endpoint   | Multiple Endpoints        |
