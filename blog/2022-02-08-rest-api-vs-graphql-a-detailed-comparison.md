@@ -17,6 +17,14 @@ overkill and many cases where GraphQL will thrive over REST API. Let's discuss w
 Let's discuss what's what throughout the post
 
 ---
+# On Using Both!
+
+Apito Console generates both GraphQL & RESTful apis from the model you specify. Both rest & graphql has their own pros and cons.
+there is no general rules on if you are using graphql then you cant use rest api in your application! One example here where both is
+usable is the use of media. if your app has a media/file uploader then graphql is not build to handle multi-part data. In that case
+you can use graphql for content and rest api for file/media upload.
+
+Thx to Apito you have the power of both. Use accordingly.
 
 # Working with REST APIs
 
