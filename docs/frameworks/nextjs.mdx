@@ -4,4 +4,88 @@ title: Integrate NextJS with Apito
 sidebar_label: NextJS
 ---
 
-Coming Soon
+## Create a Next.js Project
+
+To create a new Next.js application, we’ll use create-next-app:
+
+```shell
+npx create-next-app next-with-apollo
+```
+
+:::note
+
+You can change next-with-apollo to be any project name, have fun with it, or choose the name of that project you want to build.
+
+:::
+
+With the app scaffolded and dependencies installed, we can now run the application:
+
+```
+cd next-with-apollo
+npm run dev
+```
+
+## Setting Up Apollo Client
+
+```
+npm install @apollo/client graphql
+```
+
+With our dependencies in place, it’s now time to set up the client in our application.
+Create a new file in the root of the project called apollo-client.js and add the following contents to it:
+
+```javascript title=./apollo-client.js
+
+import { ApolloClient, InMemoryCache } from "@apollo/client";
+
+const client = new ApolloClient({
+    uri: "https://api.apito.io/secured/graphql",
+    cache: new InMemoryCache(),
+    headers: {
+        Authorization: `Bearer API_SECRET`,
+    },
+});
+
+export default client;
+```
+
+Now we have a GraphQL client we can use within the application, and we’re ready to query for some data. However, before we can query for anything,
+we first need to know what data is available to us from the Countries API.
+
+# Using Apollo Client for statically rendered page data
+
+Before we can fetch data from the API, we have to set up our page. We do this for statically generated pages using the `getStaticProps` method.
+Next.js will use this function during the build process to get any data needed to be passed into the page component as props.
+
+Because we’re using the methods provided by Next.js to fetch the data, we’re not going to be calling our API from within React itself.
+So we’ll use Apollo Client directly instead of using hooks.
+
+Inside of `pages/index.js` import the client we created in `apollo-client.js` and `gql from @apollo/client`.
+
+```javascript title=pages/index.js
+
+import { gql } from "@apollo/client";
+import client from "../apollo-client";
+
+
+export async function getStaticProps() {
+    const { data } = await client.query({
+      query: gql`
+        query Books {
+          name
+          avatar
+          authors {
+            name
+            address
+          }
+        }
+      `,
+    });
+
+    return {
+      props: {
+        books: data.books.slice(0, 4),
+      },
+   };
+}
+```

@@ -9,7 +9,7 @@ you might be unsure if they are right for your upcoming project. I listed the be
 of the new strategy above conventional server-side CMS. Thus, you will be able to decide 
 for yourself if Headless CMS will help your project succeed or not.
 
-# What is Headless CMS?
+# What is a Headless CMS?
 
 Simply said, it is a separate admin panel that is just responsible for managing and storing content. 
 It offers front-end (the presentational portion of the website) access to the material through API. 
@@ -37,7 +37,7 @@ Headless CMS is not overloaded with additional presentational logic code at the 
 Therefore, coders just use what is required and omit the extra. The majority of optimizations 
 are also handled by contemporary front-end frameworks.
 
-# Faster Development, Lower time to Market
+# Lower time to Market, Faster Development
 
 Your chances of success increase the quicker you test your ideas and bring them to market.
 
@@ -48,7 +48,7 @@ you create the front-end in your own style.
 Front-end With the use of frameworks, high-quality websites may be created quickly. The support, 
 editing, and scaling of websites created using frameworks is simpler.
 
-# Flexible and Highly Customizable Front-end
+# Highly Customizable & Flexible Front-end
 
 You have control over how users interact with your site thanks to the flexibility of the front-end 
 solution. You may now build features that server-side CMS just couldn't support. Your website's 
@@ -58,7 +58,6 @@ customers.
 Due to the division of labor between your front-end display and headless CMS, websites are able to 
 be more flexible. Because of the numerous limitations of traditional CMS, developers must frequently 
 discover workarounds to add functionalities.
-
 
 # Cross-platform content Delivery
 
