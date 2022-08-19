@@ -25,6 +25,9 @@ const FeatureBanner = ({ data }) => {
                 <Button>{data?.button?.label}</Button>
               </a>
             )}
+            <a style={{marginLeft: '20px'}} href={'https://app.apito.io/login?action=demo'}>
+              <Button style={{backgroundColor: '#EA3A60'}} type="secondary">Explore Demo App</Button>
+            </a>
           </Box>
           <Box as="figure">
             <Swiper
