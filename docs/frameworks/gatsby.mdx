@@ -27,12 +27,10 @@ Apito has you covered with its flexibility of content types, plugins, and custom
 
 You Take advantage of the built-in webhook feature that will allow you to automatically build your Gatsby project upon the update of your data.
 
-[pic]
-
 ## Getting Started with Gatsby
 
-Follow the integration guide from our documentation to see how to consume Strapi's Content Type's API from Gatsby. As a Static Site Generator,
-Gatsby will fetch your content from Strapi at build time. Therefore, you need to configure Gatsby to communicate with your Strapi application
+Follow the integration guide from our documentation to see how to consume Apito's Content API from Gatsby. As a Static Site Generator,
+Gatsby will fetch your content from Apito at build time. Therefore, you need to configure Gatsby to communicate with your Apito Project
 
 First run this following command
 
@@ -51,11 +49,11 @@ Then we can use these environment variables via process.env and configure our pl
       options: {
         typeName: "Apito",
         fieldName: "apito",
-        url: "https://api.github.com/graphql",
+        url: "https://api.apito.io/secured/graphql",
         // HTTP headers
         headers: {
           // Learn about environment variables: https://gatsby.dev/env-vars
-          Authorization: `Bearer ${process.env.GRAPHQLI_TOKEN}`,
+          Authorization: `Bearer ${process.env.SECRET_TOKEN}`,
         },
         // HTTP headers alternatively accepts a function (allows async) | use the above or this one. Dont use both
         headers: async () => {

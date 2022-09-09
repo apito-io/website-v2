@@ -50,7 +50,7 @@ const PriceTable = ({ id, data, isMonthly }) => {
         )}
         {data?.buttonLabel && (
                 <footer sx={styles.footer}>
-                    <a target="_blank" rel="noreferrer" href={id === 4 ? 'mailto:accounts@apito.io' : 'https://app.apito.io'}>
+                    <a target="_blank" rel="noreferrer" href={(id === 10 || id === 11) ? 'mailto:accounts@apito.io' : 'https://app.apito.io'}>
                         <Button variant="primary">{data.buttonLabel}</Button>
                     </a>
                 </footer>

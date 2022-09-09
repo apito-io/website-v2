@@ -3,7 +3,7 @@ export const PricingData2 = {
     slogan: 'Self Host Plan',
     plans : [
         {
-            id: 1,
+            id: 10,
             title: 'Kubernetes Plan',
             description: 'Deploy on any Kubernetes Cluster',
             features: [
@@ -27,10 +27,10 @@ export const PricingData2 = {
                 yearly: 140.0 * 11,
                 yearly_discounted: 115.0 * 11,
             },
-            buttonLabel: 'Deploy',
+            buttonLabel: 'Contact US',
         },
         {
-            id: 1,
+            id: 11,
             title: 'AWS Cloud',
             description: 'Deploy on EC2 with RDS or DynamoDB',
             features: [
@@ -56,36 +56,7 @@ export const PricingData2 = {
                 yearly: 170 * 11,
                 yearly_discounted: 135.0 * 11,
             },
-            buttonLabel: 'Deploy',
-        },
-        {
-            id: 2,
-            title: 'Google Cloud',
-            description: 'Coming Soon ..',
-            /*features: [
-                'Highly Available',
-                'Managed Database',
-                'Connect your own Database',
-                'Option to Choose Region',
-                'Dedicated Apito Instance Setup',
-                'Unlimited API Calls /Month',
-                'Unlimited Media CDN',
-                'Unlimited Records',
-                'GraphQL Server/API',
-                'RESTful API',
-                'Content Revision History',
-                'Save Content as Draft',
-                'Database Backup & Restore',
-                'Project Import & Export',
-                'Support via Email & Chat',
-            ],
-            price: {
-                monthly: 170.0,
-                monthly_discounted: 135.0,
-                yearly: 170 * 11,
-                yearly_discounted: 135.0 * 11,
-            },
-            buttonLabel: 'Start Building',*/
-        },
+            buttonLabel: 'Contact US',
+        }
     ]
 }
