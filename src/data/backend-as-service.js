@@ -556,7 +556,7 @@ curl https://api.apito.io/secured/rest/ecom/category?name:contains="shirt"`,
                 icon: {
                     url: "https://cdn.apito.io/media/apito_website/TX9PNRYAVX_webhooks.svg",
                 },
-                link: "/self-host-apito",
+                link: "/self-host-apito-on-aws-cloud-or-kubernetes-docker",
                 link_text: "Learn More",
                 //title: "Content Modeling tools",
             },

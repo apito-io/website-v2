@@ -144,7 +144,7 @@ const config = {
                 position: 'right',
               },
               {
-                to: '/self-host-apito',
+                to: '/self-host-apito-on-aws-cloud-or-kubernetes-docker',
                 label: 'Self Host',
               },
               {
