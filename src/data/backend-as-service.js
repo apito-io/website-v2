@@ -500,7 +500,7 @@ curl https://api.apito.io/secured/rest/ecom/category?name:contains="shirt"`,
                 },
                 description: {
                     markdown:
-                        "Stop worrying about hosting your media files elsewhere. Graphqli also comes with Upload API Support",
+                        "Stop worrying about hosting your media files elsewhere. Apito also comes with Upload API Support",
                 },
                 header: "FILE STORAGE",
                 icon: {
@@ -547,7 +547,7 @@ curl https://api.apito.io/secured/rest/ecom/category?name:contains="shirt"`,
                 },
                 description: {
                     isMarkdown: true,
-                    markdown: "What makes graphqli very unique is the ability to self host  graphqli headless cms to your own cluster or on your favourite cloud infrastructure within seconds.\n" +
+                    markdown: "What makes Apito very unique is the ability to self host  Apito headless cms to your own cluster or on your favourite cloud infrastructure within seconds.\n" +
                         "\n" +
                         "Host unlimited projects and **ability to choose different database per project !!**",
                 },

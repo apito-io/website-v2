@@ -110,7 +110,7 @@ module.exports = {
         url: "https://api.apito.io/secured/graphql",
         headers: {
           // Learn about environment variables: https://gatsby.dev/env-vars
-          Authorization: `Bearer ${process.env.GRAPHQLI_TOKEN}`,
+          Authorization: `Bearer ${process.env.SECRET_TOKEN}`,
         },
         createSchema: async () => {
           const json = JSON.parse(
@@ -128,7 +128,7 @@ module.exports = {
         url: "https://api.apito.io/secured/graphql",
         headers: {
           // Learn about environment variables: https://gatsby.dev/env-vars
-          Authorization: `Bearer ${process.env.GRAPHQLI_TOKEN}`,
+          Authorization: `Bearer ${process.env.SECRET_TOKEN}`,
         },
         createSchema: async () => {
           const sdl = fs.readFileSync(`${__dirname}/schema.sdl`).toString()
@@ -182,12 +182,12 @@ module.exports = {
     {
       resolve: "gatsby-source-graphql",
       options: {
-        typeName: "Graphqli",
+        typeName: "Apito",
         fieldName: "apito",
         url: "https://api.apito.io/secured/graphql",
         headers: {
           // Learn about environment variables: https://gatsby.dev/env-vars
-          Authorization: `Bearer ${process.env.GRAPHQLI_TOKEN}`,
+          Authorization: `Bearer ${process.env.SECRET_TOKEN}`,
         },
         // `pluginOptions`: all plugin options
         //   (i.e. in this example object with keys `typeName`, `fieldName`, `url`, `createLink`)
@@ -212,14 +212,14 @@ module.exports = {
       resolve: "gatsby-source-graphql",
       options: {
         // Arbitrary name for the remote schema Query type
-        typeName: "Graphqli",
+        typeName: "Apito",
         // Field under which the remote schema will be accessible. You'll use this in your Gatsby query
         fieldName: "apito",
         // Url to query from
         url: "https://api.apito.io/secured/graphql",
         headers: {
           // Learn about environment variables: https://gatsby.dev/env-vars
-          Authorization: `Bearer ${process.env.GRAPHQLI_TOKEN}`,
+          Authorization: `Bearer ${process.env.SECRET_TOKEN}`,
         },
         // refetch interval in seconds
         refetchInterval: 60,
@@ -258,7 +258,7 @@ module.exports = {
     {
       resolve: "gatsby-source-graphql",
       options: {
-        typeName: "Graphqli",
+        typeName: "Apito",
         fieldName: "apito",
         url: "https://api.apito.io/secured/graphql",
         batch: true,
@@ -280,7 +280,7 @@ module.exports = {
     {
       resolve: "gatsby-source-graphql",
       options: {
-        typeName: "Graphqli",
+        typeName: "Apito",
         fieldName: "apito",
         url: "https://api.apito.io/secured/graphql",
         batch: true,

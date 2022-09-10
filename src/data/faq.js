@@ -58,7 +58,7 @@ export const FAQData = [
     {
         "_id": "46b69b15-92fc-4579-b5df-7df6ebd22beb",
         "answers": {
-            "markdown": "Sure you can. Graphqli provides Add-ons that add the ability to turn on Localization features per field. So for example, if you have a post and want to write its title and description in multiple languages, [follow this guide](/docs/console/adding-multilingual-support-to-your-api)."
+            "markdown": "Sure you can. Apito provides Add-ons that add the ability to turn on Localization features per field. So for example, if you have a post and want to write its title and description in multiple languages, [follow this guide](/docs/console/adding-multilingual-support-to-your-api)."
         },
         "question": "Can I Write Content in multiple Languages?"
     }

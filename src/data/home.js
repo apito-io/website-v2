@@ -466,7 +466,7 @@ curl https://api.apito.io/secured/rest/ecom/category?name:contains="shirt"`,
         },
         description: {
           markdown:
-            "Stop worrying about hosting your media files elsewhere. Graphqli also comes with Upload API Support",
+            "Stop worrying about hosting your media files elsewhere. Apito also comes with Upload API Support",
         },
         header: "FILE STORAGE",
         icon: {

@@ -105,7 +105,7 @@ export const HomePageData = {
                 },
                 description: {
                     markdown:
-                        "Stop worrying about hosting your media files elsewhere. Graphqli also comes with Upload API Support",
+                        "Stop worrying about hosting your media files elsewhere. Apito also comes with Upload API Support",
                 },
                 header: "FILE STORAGE",
                 icon: {
