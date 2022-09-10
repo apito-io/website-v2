@@ -96,17 +96,17 @@ const config = {
             position: 'left'
           },
           {
-            to: '/pricing',
-            label: 'Pricing',
-            position: 'left',
-          },
-          {
             to: '/',
             label: 'Home',
             position: 'right',
           },
           {
-            to: '/backend-as-service',
+            to: '/open-source-headless-cms',
+            label: 'Open Source',
+            position: 'right',
+          },
+          {
+            to: '/using-apito-as-a-backend-graphql-and-rest-api',
             label: 'Backend-as-Service',
             position: 'right',
           },
@@ -116,8 +116,13 @@ const config = {
                                   position: 'right',
                               },*/
           {
-            to: '/self-host-apito',
+            to: '/self-host-apito-on-aws-cloud-or-kubernetes-docker',
             label: 'Self Host',
+            position: 'right',
+          },
+          {
+            to: '/pricing',
+            label: 'Pricing',
             position: 'right',
           },
           {

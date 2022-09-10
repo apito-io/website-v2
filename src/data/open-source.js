@@ -24,7 +24,7 @@ export const OpenSourceData = {
                 icon: {
                     url: "https://cdn.apito.io/media/apito_website/TX9PNRYAVX_webhooks.svg",
                 },
-                link: "/pricing",
+                link: "https://forms.gle/4o4JQXuoZ3uth6sR9",
                 link_text: "JOIN THE EARLY ACCESS",
                 //title: "Content Modeling tools",
             },
