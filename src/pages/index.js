@@ -15,6 +15,8 @@ import "swiper/css/navigation";
 import "swiper/css/thumbs";
 import {CommonData} from "../data/common";
 import FeatureBanner from "../components/feature-banner";
+import TestimonialCard from "../components/testimonial";
+import Home from "./docs";
 
 function Hello() {
 
@@ -47,6 +49,9 @@ function Hello() {
                 <Features features={HomePageData.features3} hideSection={true}/>
 
                 <Databases data={CommonData.databases}/>
+
+
+                <TestimonialCard data={HomePageData.testimonials}/>
 
                 <Footer/>
             </ThemeProvider>

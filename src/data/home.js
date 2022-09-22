@@ -509,4 +509,71 @@ curl https://api.apito.io/secured/rest/ecom/category?name:contains="shirt"`,
       },
     ],
   },
+
+  testimonials: [
+    {
+      data: {
+        avatar: {
+          url: "https://scontent.fdac14-1.fna.fbcdn.net/v/t39.30808-6/300357009_10102208503879557_7089485757714443860_n.jpg?stp=cp6_dst-jpg&_nc_cat=109&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=stgua5frpAoAX_tCZd8&_nc_ht=scontent.fdac14-1.fna&oh=00_AT_f0STGrfsDbCsDhVXPuX6vG6PFmDSxGLk2Y-z5ZKI0cQ&oe=63311324"
+        },
+        name: "Shahir Chowdhury",
+        role: "Founder of Shikho",
+        quote: {
+          text: "Shikho needed a quick solution to host its content quickly and we looked into so many headless cms and none was as simple to use as apito."
+        },
+        rating: 5,
+        title: "Exactly What We Needed",
+        twitter_id: "@shahir__c"
+      },
+      id: 1
+    },
+    {
+      data: {
+        avatar: {
+          url: "https://scontent.fdac14-1.fna.fbcdn.net/v/t1.6435-9/82057883_1215414895315508_1507273885827989504_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=e3f864&_nc_ohc=qvK3USOuOecAX8E220g&_nc_ht=scontent.fdac14-1.fna&oh=00_AT_cNWl1LxH0ciCd5g3lZDKjctYwsk09TwqnjIg2yQkFxg&oe=63527E9B"
+        },
+        name: "Koushik Ambani",
+        role: "App Developer",
+        quote: {
+          text: "Our team was looking for a api builder that could be extensible. Apito was the perfect choice because it supports aws lambda functions to write logic."
+        },
+        rating: 5,
+        title: "Able to Launch My App In Time",
+        twitter_id: "@rikoushik"
+      },
+      id: 2,
+    },
+    {
+      data: {
+        avatar: {
+          url: "https://scontent.fdac14-1.fna.fbcdn.net/v/t1.6435-9/123370153_10219702136963672_8502260312382157807_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=4rGeqMJjWgAAX_Dz_BU&_nc_ht=scontent.fdac14-1.fna&oh=00_AT9njYdU94iVXamCjxDDXlCq8HcJT3TQYO1x5ZdtC-zGvw&oe=6352EBB9"
+        },
+        name: "Tareq Jobayere",
+        role: 'Theme Developer',
+        quote: {
+          text: "Each and Every theme and templates we build we need some place to host our content and Apito was the perfect and easy choice for us."
+        },
+        rating: 4,
+        title: "The Missing Headless CMS in the Market",
+        twitter_id: "@tareqjobayere"
+      },
+      id: 3
+    },
+    /*{
+      data: {
+        avatar: {
+          url: "https://scontent.fdac14-1.fna.fbcdn.net/v/t39.30808-1/278381298_10226067698254289_7533317581243700469_n.jpg?stp=c175.0.422.422a_dst-jpg_p480x480&_nc_cat=101&ccb=1-7&_nc_sid=7206a8&_nc_ohc=I4oXR2sim0sAX8U3i2c&_nc_ht=scontent.fdac14-1.fna&oh=00_AT8rbdqFDA0Hlhijx3gOZfKquO8mu772YbNSdEyrK5slZw&oe=63327889"
+        },
+        name: "Naseef Fatemi",
+        role: "Entrepreneur",
+        quote: {
+          text: "Get working experience to work with this amazing team & in future want to work together for bright future projects and also make deposit to freelancer."
+        },
+        rating: 4,
+        title: "WYSIWYG Api Builder for me",
+        twitter_id: "@NFatemi"
+      },
+      id: 4
+    },*/
+  ]
 };
