@@ -4,7 +4,7 @@ import React from "react";
 const Seo = ({data}) => {
     return (
         <Head>
-            <title>{data.title}</title>
+            <title>{data.title} {(data.subtitle !== undefined) ? `| ${data.subtitle}` : ''}</title>
             <meta property="og:title" content={data.title} />
             <meta property="og:description"
                   content={data.description} />

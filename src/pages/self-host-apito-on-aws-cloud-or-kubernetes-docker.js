@@ -16,6 +16,7 @@ import {CommonData} from "../data/common";
 import FeatureBanner from "../components/feature-banner";
 import {SelfHostData} from "../data/self-host-apito";
 import HeroBanner from "../components/hero-banner";
+import {OpenSourceData} from "../data/open-source";
 
 function Hello() {
 
@@ -28,7 +29,7 @@ function Hello() {
             description={`${siteConfig.tagline}`}>
             <ThemeProvider theme={themeSettings}>
                 {/*overwrites title and include SEO*/}
-                <Seo data={CommonData.seo}/>
+                <Seo data={ {...CommonData.seo, title : SelfHostData.header.title}}/>
 
                 <HeroBanner data={SelfHostData.header}/>
                 <Features features={SelfHostData.features1} hideSection={true}/>

@@ -28,7 +28,7 @@ function Hello() {
             description={`${siteConfig.tagline}`}>
             <ThemeProvider theme={themeSettings}>
                 {/*overwrites title and include SEO*/}
-                <Seo data={CommonData.seo}/>
+                <Seo data={ {...CommonData.seo, title : OpenSourceData.header.title}}/>
 
                 <HeroBanner data={OpenSourceData.header}/>
                 <Features features={OpenSourceData.features1} hideSection={true}/>

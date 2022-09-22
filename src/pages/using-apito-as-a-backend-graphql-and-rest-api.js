@@ -18,6 +18,7 @@ import Databases from "../components/databases";
 import {CommonData} from "../data/common";
 import {FooterData} from "../data/footer";
 import {BackendPageData} from "../data/backend-as-service";
+import {OpenSourceData} from "../data/open-source";
 
 function Hello() {
 
@@ -30,7 +31,7 @@ function Hello() {
             description={`${siteConfig.tagline}`}>
             <ThemeProvider theme={themeSettings}>
                 {/*overwrites title and include SEO*/}
-                <Seo data={CommonData.seo}/>
+                <Seo data={ {...CommonData.seo, title : 'Apito as Backend for Your Application'}}/>
 
                 {/*                <StickyHeader/>*/}
                 <HeroBanner data={BackendPageData.header}/>

@@ -29,7 +29,7 @@ function Hello() {
             description={`${siteConfig.tagline}`}>
             <ThemeProvider theme={themeSettings}>
                 {/*overwrites title and include SEO*/}
-                <Seo data={CommonData.seo}/>
+                <Seo data={ {...CommonData.seo, subtitle: 'FAQ'} }/>
 
                 <Container sx={styles.container}>
                     <SectionHeading title="Frequently Asked Questions" as={'h1'}/>

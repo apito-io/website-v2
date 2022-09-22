@@ -29,7 +29,7 @@ function Hello() {
             description={`${siteConfig.tagline}`}>
             <ThemeProvider theme={themeSettings}>
                 {/*overwrites title and include SEO*/}
-                <Seo data={CommonData.seo}/>
+                <Seo data={ {...CommonData.seo, subtitle: 'Pricing' }}/>
 
                 <PricingPage data={PricingData1}/>
                 <PricingPage data={PricingData2}/>

@@ -29,7 +29,19 @@ const sidebars = {
 
   docs: [
     'build-api-quick-start-guide',
-    'using-apito-as-backend-as-service',
+    {
+      type: 'category',
+      label: 'Building Apps',
+      link: {
+        type: 'generated-index',
+        description: "Learn how to build content api in both graphql and rest by using apito console",
+        keywords: ['guides', 'how-to', 'documentation'],
+        image: '/img/docusaurus.png',
+      },
+      items: [
+          'build-apps/building-a-todo-app-with-apito-with-both-rest-and-graphql-api'
+      ]
+    },
     {
       type: 'category',
       label: 'Apito Console Howto',
@@ -231,6 +243,7 @@ const sidebars = {
         },
       ],
     },
+    'using-apito-as-backend-as-service',
   ],
 };
 
