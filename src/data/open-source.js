@@ -1,6 +1,6 @@
 export const OpenSourceData = {
     header: {
-        title: 'Apito Community Edition & Open Source',
+        title: 'Apito Community Edition & Open Source Headless CMS',
         //image: "https://cdn.apito.io/media/apito_website/Y97T0H5XM7_apito_console_full_picture.png",
         description:
             "We decided to build a community version of Apito that will be open source for you to explore, extend and self host !"
