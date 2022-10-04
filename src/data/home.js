@@ -514,7 +514,7 @@ curl https://api.apito.io/secured/rest/ecom/category?name:contains="shirt"`,
     {
       data: {
         avatar: {
-          url: "https://scontent.fdac14-1.fna.fbcdn.net/v/t39.30808-6/300357009_10102208503879557_7089485757714443860_n.jpg?stp=cp6_dst-jpg&_nc_cat=109&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=stgua5frpAoAX_tCZd8&_nc_ht=scontent.fdac14-1.fna&oh=00_AT_f0STGrfsDbCsDhVXPuX6vG6PFmDSxGLk2Y-z5ZKI0cQ&oe=63311324"
+          url: "https://media-exp1.licdn.com/dms/image/C5603AQEXXBqbrQd41g/profile-displayphoto-shrink_800_800/0/1660751372728?e=1670457600&v=beta&t=LaGO20YoKqyiESJo3Ru9ZwlT7F01z3bVo5pCX8qO86I"
         },
         name: "Shahir Chowdhury",
         role: "Founder of Shikho",
@@ -549,7 +549,7 @@ curl https://api.apito.io/secured/rest/ecom/category?name:contains="shirt"`,
           url: "https://scontent.fdac14-1.fna.fbcdn.net/v/t1.6435-9/123370153_10219702136963672_8502260312382157807_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=4rGeqMJjWgAAX_Dz_BU&_nc_ht=scontent.fdac14-1.fna&oh=00_AT9njYdU94iVXamCjxDDXlCq8HcJT3TQYO1x5ZdtC-zGvw&oe=6352EBB9"
         },
         name: "Tareq Jobayere",
-        role: 'Theme Developer',
+        role: 'Founder of RedQ.io',
         quote: {
           text: "Each and Every theme and templates we build we need some place to host our content and Apito was the perfect and easy choice for us."
         },
