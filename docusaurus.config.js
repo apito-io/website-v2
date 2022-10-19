@@ -86,8 +86,13 @@ const config = {
         },
         items: [
           {
+            to: '/',
+            label: 'Home',
+            position: 'left',
+          },
+          {
             to: '/docs/build-api-quick-start-guide',
-            label: 'Docs',
+            label: 'Documentation',
             position: 'left',
           },
           {
@@ -96,29 +101,46 @@ const config = {
             position: 'left'
           },
           {
-            to: '/',
-            label: 'Home',
+            type: 'dropdown',
+            label: 'Products',
             position: 'right',
+            items: [
+              {
+                to: '/powerful-and-extensible-headless-cms',
+                label: 'Headless CMS',
+              },
+              {
+                to: '/using-apito-as-a-backend-graphql-and-rest-api',
+                label: 'Backend For Apps',
+              },
+              {
+                to: '/self-host-apito-on-aws-cloud-or-kubernetes-docker',
+                label: 'Enterprise Cloud',
+              },
+              {
+                to: '/open-source-headless-cms',
+                label: 'Open Source (BETA)',
+              },
+            ],
           },
           {
-            to: '/open-source-headless-cms',
-            label: 'Open Source',
+            type: 'dropdown',
+            label: 'Customers',
             position: 'right',
-          },
-          {
-            to: '/using-apito-as-a-backend-graphql-and-rest-api',
-            label: 'Backend-as-Service',
-            position: 'right',
-          },
-          /*                    {
-                                  to: '/headless-cms',
-                                  label: 'Headless CMS',
-                                  position: 'right',
-                              },*/
-          {
-            to: '/self-host-apito-on-aws-cloud-or-kubernetes-docker',
-            label: 'Self Host',
-            position: 'right',
+            items: [
+              {
+                to: '/using-apito-as-a-backend-graphql-and-rest-api',
+                label: 'App Developers',
+              },
+              {
+                to: '/api-sandbox-for-startups',
+                label: 'Founder & Startups',
+              },
+              {
+                to: '/api-for-digital-business-owners',
+                label: 'Digital Business Owners',
+              },
+            ],
           },
           {
             to: '/pricing',

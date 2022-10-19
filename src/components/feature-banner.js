@@ -8,7 +8,7 @@ import React, { useState } from "react";
 import { SwiperSlide, Swiper } from "swiper/react";
 import { FreeMode, Navigation, Thumbs, Autoplay, EffectFade } from "swiper";
 
-const FeatureBanner = ({ data }) => {
+const FeatureBanner = ({ data, hideImage }) => {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
   return (
@@ -29,58 +29,62 @@ const FeatureBanner = ({ data }) => {
               <Button style={{backgroundColor: '#EA3A60'}} type="secondary">Explore Demo App</Button>
             </a>
           </Box>
-          <Box as="figure">
-            <Swiper
-              onSwiper={setThumbsSwiper}
-              spaceBetween={10}
-              slidesPerView={4}
-              freeMode={true}
-              watchSlidesProgress={true}
-              modules={[FreeMode, Navigation, Thumbs]}
-              sx={styles.mySwiper}
-            >
-              <SwiperSlide>
-                <span className="material-icons">terminal</span>
-                <span>Define Model</span>
-              </SwiperSlide>
-              <SwiperSlide>
-                <span className="material-icons">edit_note</span>
-                <span>Write Content</span>
-              </SwiperSlide>
-              <SwiperSlide>
-                <span className="material-icons">cloud_upload</span>
-                <span>Explore API</span>
-              </SwiperSlide>
-            </Swiper>
-            <Swiper
-              spaceBetween={0}
-              slidesPerView={1}
-              thumbs={{ swiper: thumbsSwiper }}
-              //centeredSlides={true} // Active if center mode
-              //   centeredSlidesBounds={true}
-              modules={[FreeMode, Navigation, Thumbs, Autoplay]}
-              autoplay={{
-                delay: 3000,
-                disableOnInteraction: false,
-              }}
-              //   effect={"fade"}
-            >
-              {data?.images &&
-                data?.images.map((image) => {
-                  return (
+          {
+            !hideImage ?
+
+                <Box as="figure">
+                  <Swiper
+                      onSwiper={setThumbsSwiper}
+                      spaceBetween={10}
+                      slidesPerView={4}
+                      freeMode={true}
+                      watchSlidesProgress={true}
+                      modules={[FreeMode, Navigation, Thumbs]}
+                      sx={styles.mySwiper}
+                  >
                     <SwiperSlide>
-                      <Image
-                        src={image}
-                        width={"auto"}
-                        height={740}
-                        alt={"Apito Console"}
-                        title={"Apito Console"}
-                      />
+                      <span className="material-icons">terminal</span>
+                      <span>Define Model</span>
                     </SwiperSlide>
-                  );
-                })}
-            </Swiper>
-          </Box>
+                    <SwiperSlide>
+                      <span className="material-icons">edit_note</span>
+                      <span>Write Content</span>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                      <span className="material-icons">cloud_upload</span>
+                      <span>Explore API</span>
+                    </SwiperSlide>
+                  </Swiper>
+                  <Swiper
+                      spaceBetween={0}
+                      slidesPerView={1}
+                      thumbs={{swiper: thumbsSwiper}}
+                      //centeredSlides={true} // Active if center mode
+                      //   centeredSlidesBounds={true}
+                      modules={[FreeMode, Navigation, Thumbs, Autoplay]}
+                      autoplay={{
+                        delay: 3000,
+                        disableOnInteraction: false,
+                      }}
+                      //   effect={"fade"}
+                  >
+                    {data?.images &&
+                    data?.images.map((image) => {
+                      return (
+                          <SwiperSlide>
+                            <Image
+                                src={image}
+                                width={"auto"}
+                                height={740}
+                                alt={"Apito Console"}
+                                title={"Apito Console"}
+                            />
+                          </SwiperSlide>
+                      );
+                    })}
+                  </Swiper>
+                </Box> : null
+          }
         </Grid>
       </Container>
     </section>

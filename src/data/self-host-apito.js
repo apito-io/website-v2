@@ -20,7 +20,7 @@ export const SelfHostData = {
                         "Host unlimited projects and **ability to choose different database per project !!**",
                 },
                 textAlign: 'left',
-                header: "SELF HOST",
+                header: "ENTERPRISE PLAN",
                 icon: {
                     url: "https://cdn.apito.io/media/apito_website/TX9PNRYAVX_webhooks.svg",
                 },

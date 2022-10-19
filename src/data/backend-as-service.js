@@ -1,12 +1,12 @@
 export const BackendPageData = {
     header: {
-        title: 'Develop API for <span style="color:#EA3A60"> web </span> and <span style="color:#EA3A60"> mobile </span> apps',
+        title: 'Build Backend API for <span style="color:#EA3A60"> Web </span> and <span style="color:#EA3A60"> Mobile </span> Apps',
         //image:
         //    "https://cdn.apito.io/media/apito_website/Y97T0H5XM7_apito_console_full_picture.png",
         description:
-            "Manage Less Infrastructure, Apito is a Low Code Platform. " +
-            "<br/>" +
-            "Deliver Projects in weeks not months.",
+            "Instantly available RESTful & GraphQL API for your Application with Auth, Complex Filter & Cloud Function Support ",
+           /* "<br/>" +
+            "Database Modeling with Relations, Manage Less Infrastructure, Deliver Projects in weeks not months.",*/
         button: {
             label: "Start A Project",
             link: "/docs/build-api-quick-start-guide",
@@ -48,45 +48,6 @@ export const BackendPageData = {
             },
         ],
     },
-    /*features1: {
-        slogan: "None",
-        title: "None",
-        data: [
-            {
-                cover: {
-                    url: "https://cdn.apito.io/media/apito_website/FX9FK3SLJ5_database_model.png",
-                },
-                description: {
-                    markdown:
-                        "Content Modeling has never been easier. Model your database with fields & relations",
-                },
-                header: "DATABASE",
-                icon: {
-                    url: "https://cdn.apito.io/media/apito_website/TX9PNRYAVX_webhooks.svg",
-                },
-                link: "/docs/model/database-design",
-                link_text: "Learn How",
-                title: "Database Modeling tools",
-            },
-
-            {
-                cover: {
-                    url: "https://cdn.apito.io/media/apito_website/homepagev2/TM3F0KHCMN_dual_engine_api.png",
-                },
-                description: {
-                    markdown:
-                        "Instantly connectable GraphQL & REST API with Complex Filter",
-                },
-                header: "INSTANT API",
-                icon: {
-                    url: "https://cdn.apito.io/media/apito_website/8XRYHC4LBQ_auth_module.svg",
-                },
-                link: "/docs/build-api-quick-start-guide",
-                link_text: "See In Action",
-                title: "Build API in both GraphQL & REST API",
-            },
-        ],
-    },*/
     exampleQueries: {
         //slogan: "QUERY PATTERNS",
         //title: "Develop API with complex Queries and Search",
@@ -116,13 +77,6 @@ export const BackendPageData = {
         }
         avatar {
           url
-        }
-      }
-      features {
-        title
-        link
-        description {
-          markdown
         }
       }
     }
