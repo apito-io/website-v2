@@ -35,7 +35,7 @@ function Hello() {
 
             <ThemeProvider theme={themeSettings}>
                 {/*overwrites title and include SEO*/}
-                <Seo data={ {...CommonData.seo, title: 'Api Driven Powerful & Extensible Headless CMS' }}/>
+                <Seo data={ {...CommonData.seo, title: 'API Driven Powerful & Extensible Headless CMS' }}/>
 
                 {/*                <StickyHeader/>*/}
                 <FeatureBanner data={HomePageData.header} />
