@@ -28,7 +28,7 @@ function Hello() {
             description={`${siteConfig.tagline}`}>
             <ThemeProvider theme={themeSettings}>
                 {/*overwrites title and include SEO*/}
-                <Seo data={ {...CommonData.seo, title : OpenSourceData.header.title}}/>
+                <Seo data={ {...CommonData.seo, title: 'Powerful OpenSource Headless CMS For Your Content', subtitle: 'Apito Community Edition' }}/>
 
                 <HeroBanner data={OpenSourceData.header}/>
                 <Features features={OpenSourceData.features1} hideSection={true}/>

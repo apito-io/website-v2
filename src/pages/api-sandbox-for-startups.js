@@ -29,7 +29,7 @@ function Hello() {
             description={`${siteConfig.tagline}`}>
             <ThemeProvider theme={themeSettings}>
                 {/*overwrites title and include SEO*/}
-                <Seo data={ {...CommonData.seo, title : StartupData.header.title}}/>
+                <Seo data={ {...CommonData.seo, title: 'API Sandbox for Your Startup & Business', subtitle: 'Apito' }}/>
 
                 <HeroBanner data={StartupData.header}/>
                 <Features features={StartupData.features1} hideSection={true}/>

@@ -18,6 +18,7 @@ import FeatureBanner from "../components/feature-banner";
 import TestimonialCard from "../components/testimonial";
 import Home from "./docs";
 import {HeadlessCMSData} from "../data/headless-cms";
+import {AWSBasedHeadlessCMSData} from "../data/aws-based-headless-cms";
 
 function Hello() {
 
@@ -36,18 +37,18 @@ function Hello() {
 
             <ThemeProvider theme={themeSettings}>
                 {/*overwrites title and include SEO*/}
-                <Seo data={ {...CommonData.seo, title: 'Api Driven Powerful & Extensible Headless CMS' }}/>
+                <Seo data={ {...CommonData.seo, title: 'AWS Based Powerful Headless CMS', subtitle: 'Apito' }}/>
 
                 {/*                <StickyHeader/>*/}
-                <FeatureBanner data={HeadlessCMSData.header} hideImage={true} />
+                <FeatureBanner data={AWSBasedHeadlessCMSData.header} hideIndicator={true}/>
                 {/*<HeroBanner data={HomePageData.header}/>*/}
-                <Features features={HeadlessCMSData.features1} hideSection={true}/>
+                <Features features={AWSBasedHeadlessCMSData.features1} hideSection={true}/>
                {/* <ExampleQueries data={HomePageData.exampleQueries}/>*/}
 
 
                 {/*<Projects data={HomePageData.projects} />*/}
-                <Features features={HeadlessCMSData.features2} hideSection={true}/>
-                <Features features={HeadlessCMSData.features3} hideSection={true}/>
+                <Features features={AWSBasedHeadlessCMSData.features2} hideSection={true}/>
+                <Features features={AWSBasedHeadlessCMSData.features3} hideSection={true}/>
 
                 <Databases data={CommonData.databases}/>
 

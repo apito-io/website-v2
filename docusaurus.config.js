@@ -110,6 +110,10 @@ const config = {
                 label: 'Headless CMS',
               },
               {
+                to: '/aws-based-headless-cms',
+                label: 'AWS Headless CMS',
+              },
+              {
                 to: '/using-apito-as-a-backend-graphql-and-rest-api',
                 label: 'Backend For Apps',
               },
