@@ -1,13 +1,13 @@
 export const HeadlessCMSData = {
   header: {
-    title: "Powerful & Extensible Headless CMS",
+    title: "Instant API For Your Content",
     images: [
       "https://cdn.apito.io/media/shikho_website_v2_8ma77/30RCY24Q15_Apito_Console___Model.png",
       "https://cdn.apito.io/media/shikho_website_v2_8ma77/1ZGH5QE8U5_Apito_Console___Content.png",
       "https://cdn.apito.io/media/shikho_website_v2_8ma77/IN1TXKJPX5_Apito_Console___API.png",
     ],
     description:
-      "The Most Powerful Headless Content Management as a Service with CDN, Webhooks, Team Collaborations, Content Revision, Cloud Functions and Much more",
+        "Apito Cloud CMS Equipped With Media Storage, Webhooks, Team Collaborations, Content Revision, Cloud Functions and Much More",
     button: {
       label: "Start A Project",
       link: "/docs/build-api-quick-start-guide",

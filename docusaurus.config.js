@@ -6,8 +6,8 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'API Driven Extensible Headless CMS',
-  tagline: 'The most powerful Headless CMS for your Content with Team Collaborations, Revision, CDN & Much more ..',
+  title: 'Apito',
+  tagline: 'A Powerful & Extensible Headless CMS For Your Content With Media Storage, Team Collaborations, Doc Revision & Much more ..',
   url: 'https://apito.io',
   baseUrl: '/',
   onBrokenLinks: 'throw',
@@ -109,11 +109,7 @@ const config = {
             items: [
               {
                 to: '/powerful-and-extensible-headless-cms',
-                label: 'Headless CMS',
-              },
-              {
-                to: '/aws-based-headless-cms',
-                label: 'AWS Headless CMS',
+                label: 'Cloud Headless CMS',
               },
               {
                 to: '/using-apito-as-a-backend-graphql-and-rest-api',
@@ -122,6 +118,10 @@ const config = {
               {
                 to: '/self-host-apito-on-aws-cloud-or-kubernetes-docker',
                 label: 'Enterprise Cloud',
+              },
+              {
+                to: '/aws-based-headless-cms',
+                label: 'AWS Headless CMS',
               },
               {
                 to: '/open-source-headless-cms',
