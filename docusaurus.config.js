@@ -83,7 +83,7 @@ const config = {
         }
       },
       navbar: {
-        title: 'apito.io',
+        title: 'Apito CMS',
         logo: {
           alt: 'Apito Logo',
           src: 'img/logo.svg',
