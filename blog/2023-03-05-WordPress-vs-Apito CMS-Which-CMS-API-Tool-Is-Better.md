@@ -1,5 +1,5 @@
 ---
-slug: WordPress-vs-Apito CMS-Which-CMS-API-Tool-Is-Better
+slug: WordPress-vs-Apito-CMS-Which-CMS-API-Tool-Is-Better
 title: WordPress vs. Apito CMS, Which CMS API Tool Is Better?
 tags: [fahim]
 ---
