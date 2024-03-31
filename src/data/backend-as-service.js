@@ -1,6 +1,6 @@
 export const BackendPageData = {
     header: {
-        title: 'Build Backend API for <span style="color:#EA3A60"> Web </span> and <span style="color:#EA3A60"> Mobile </span> Apps',
+        title: 'Build API for <span style="color:#EA3A60"> Your Web </span> and <span style="color:#EA3A60"> Mobile </span> Applications',
         //image:
         //    "https://cdn.apito.io/media/apito_website/Y97T0H5XM7_apito_console_full_picture.png",
         description:

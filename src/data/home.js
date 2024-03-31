@@ -1,6 +1,6 @@
 export const HomePageData = {
   header: {
-    title: "Powerful & Extensible Headless CMS",
+    title: "Powerful & Extensible Backend API Builder",
     images: [
       "https://cdn.apito.io/media/shikho_website_v2_8ma77/30RCY24Q15_Apito_Console___Model.png",
       "https://cdn.apito.io/media/shikho_website_v2_8ma77/1ZGH5QE8U5_Apito_Console___Content.png",

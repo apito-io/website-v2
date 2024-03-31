@@ -31,7 +31,7 @@ function Hello() {
             description={`${siteConfig.tagline}`}>
             <ThemeProvider theme={themeSettings}>
                 {/*overwrites title and include SEO*/}
-                <Seo data={ {...CommonData.seo, title : 'Build Backend for Your Application', subtitle: 'Apito'}}/>
+                <Seo data={ {...CommonData.seo, title : 'Build API for Your Application', subtitle: 'Apito'}}/>
 
                 {/*                <StickyHeader/>*/}
                 <HeroBanner data={BackendPageData.header}/>

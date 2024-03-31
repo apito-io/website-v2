@@ -6,7 +6,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Apito',
+  title: 'Apito CMS',
   tagline: 'A Powerful & Extensible Headless CMS For Your Content With Media Storage, Team Collaborations, Doc Revision & Much more ..',
   url: 'https://apito.io',
   baseUrl: '/',
@@ -48,7 +48,7 @@ const config = {
           editUrl:
             'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
           blogTitle: 'Headless CMS Blog',
-          blogDescription: 'GraphQL & Headless CMS Howtos, Tutorial & Guides',
+          blogDescription: 'GraphQL & Headless CMS Blog, Howto, Tutorial & Guides',
           postsPerPage: 'ALL',
           blogSidebarCount: 'ALL',
         },
@@ -116,8 +116,8 @@ const config = {
                 label: 'Cloud Headless CMS',
               },
               {
-                to: '/using-apito-as-a-backend-graphql-and-rest-api',
-                label: 'Backend For Apps',
+                to: '/using-apito-to-build-backend-api-graphql-and-rest-api',
+                label: 'API For Application',
               },
               {
                 to: '/self-host-apito-on-aws-cloud-or-kubernetes-docker',

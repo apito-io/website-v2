@@ -1,11 +1,11 @@
-export const AWSBasedHeadlessCMSData = {
+export const PostgresCMSData = {
   header: {
-    title: "AWS Based Headless CMS Build with AWS Services like Cognito,S3,RDS,Dynamodb",
+    title: "PostgreSQL Powered Headless CMS",
     images: [
       "https://cdn.apito.io/media/apito_website/8AM3V3ARCE_aws_headless_cms.png"
     ],
     description:
-      "Apito is designed to be integrated flawlessly with your existing aws infrastructure. You can host Apito Engine in your EC2 or EKS Cluster",
+      "Use PostgreSQL as your Content Database.  You can host Apito Engine in your EC2 or EKS Cluster",
     button: {
       label: "See The Pricing",
       link: "/pricing",

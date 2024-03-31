@@ -25,23 +25,23 @@ const PriceTable = ({ id, data, isMonthly }) => {
                     <Fragment>
                         {data?.price?.monthly_discounted > 0 && (
                             <del sx={styles.regularPrice}>
-                                <span>${data?.price?.monthly}</span> /Monthly
+                                <span>${data?.price?.monthly}</span> /Project/Month
                             </del>
                         )}
                         <span sx={styles.discountedPrice}>
-              <span>${data?.price?.monthly_discounted}</span> /Monthly
+              <span>${data?.price?.monthly_discounted}</span> /Project/Month
             </span>
                     </Fragment>
                 ) : (
                     <Fragment>
                         {data?.price?.yearly_discounted > 0 && (
                             <del sx={styles.regularPrice}>
-                                <span sx={{ fontSize: 18 }}>${data?.price?.yearly}</span> /Annual
+                                <span sx={{ fontSize: 18 }}>${data?.price?.yearly}</span> /Project/Annual
                             </del>
                         )}
                         {data?.price?.yearly_discounted > 0 && (
                             <span sx={styles.discountedPrice}>
-                    <span>${data?.price?.yearly_discounted.toFixed(1)}</span> /Annual
+                    <span>${data?.price?.yearly_discounted.toFixed(1)}</span> /Project/Annual
                 </span>
                         )}
                     </Fragment>
@@ -50,7 +50,7 @@ const PriceTable = ({ id, data, isMonthly }) => {
         )}
         {data?.buttonLabel && (
                 <footer sx={styles.footer}>
-                    <a target="_blank" rel="noreferrer" href={(id === 10 || id === 11) ? 'mailto:accounts@apito.io' : 'https://app.apito.io'}>
+                    <a target="_blank" rel="noreferrer" href={(id === 3 || id === 10 || id === 11) ? 'mailto:accounts@apito.io' : 'https://app.apito.io'}>
                         <Button variant="primary">{data.buttonLabel}</Button>
                     </a>
                 </footer>
