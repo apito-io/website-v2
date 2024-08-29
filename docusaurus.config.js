@@ -6,13 +6,8 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-<<<<<<< HEAD
-  title: 'Apito CMS',
-  tagline: 'A Powerful & Extensible Headless CMS For Your Content With Media Storage, Team Collaborations, Doc Revision & Much more ..',
-=======
   title: 'Apito',
   tagline: 'A Powerful API builder with Serverless Functions to Empower your API Development Cycle to Ship Software Faster',
->>>>>>> 454500c5f4dcba4b31ea3f0824d59987b5fc85c5
   url: 'https://apito.io',
   baseUrl: '/',
   onBrokenLinks: 'throw',
