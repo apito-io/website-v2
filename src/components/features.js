@@ -5,6 +5,7 @@ import React from "react";
 import {jsx, Button, Container, Flex, Heading, Image, Text} from 'theme-ui';
 import SectionHeading from "./section-heading";
 import Markdown from "./markdown";
+import {Icon} from "@iconify/react";
 
 const Features = ({features, hideSection}) => {
     return (
@@ -20,6 +21,7 @@ const Features = ({features, hideSection}) => {
                     i % 2 === 0 ?
                         <div key={i} sx={styles.grid}>
                             <div sx={styles.heading} style={feature.textAlign && {textAlign: feature.textAlign}}>
+                                <Icon icon={feature.icon} style={styles.icon}/>
                                 <Text as='span' className='slogan'>{feature?.header}</Text>
                                 <Heading as='h2'>{feature?.title}</Heading>
                                 {
@@ -36,15 +38,20 @@ const Features = ({features, hideSection}) => {
                                 )}
                             </div>
                             <Flex as='figure' sx={styles.figure}>
-                                <Image width={625} height={425} src={feature?.cover?.url} alt='browser'/>
+                                {feature?.cover ? <Image width={625} height={425} src={feature?.cover?.url} alt='browser'/> :
+                                    feature?.component
+                                }
                             </Flex>
                         </div>
                         :
                         <div style={{paddingTop: '70px'}} key={i} sx={styles.grid}>
                             <Flex as='figure' sx={styles.figure}>
-                                <Image width={625} height={525} src={feature?.cover?.url} alt='browser'/>
+                                {feature?.cover ? <Image width={625} height={425} src={feature?.cover?.url} alt='browser'/> :
+                                    feature?.component
+                                }
                             </Flex>
                             <div sx={styles.heading} style={feature.textAlign && {textAlign: feature.textAlign}}>
+                                <Icon icon={feature.icon} style={styles.icon}/>
                                 <Text as='span' className='slogan'>{feature?.header}</Text>
                                 <Heading as='h2'>{feature?.title}</Heading>
                                 {
@@ -70,6 +77,13 @@ const Features = ({features, hideSection}) => {
 export default Features;
 
 const styles = {
+    icon: {
+        display: 'inline',
+        textAlign: 'center',
+        marginRight: '8px',
+        fontSize: '35px',
+        color: 'primary',
+    },
     section: {
         pt: [20, null, null, null, 20],
         pb: [20, null, null, null, 20],

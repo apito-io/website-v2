@@ -17,6 +17,7 @@ import {CommonData} from "../data/common";
 import FeatureBanner from "../components/feature-banner";
 import TestimonialCard from "../components/testimonial";
 import Home from "./docs";
+import CustomTerminalComponent from "../components/typed-terminal";
 
 function Hello() {
 

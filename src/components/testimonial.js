@@ -7,6 +7,7 @@ import SectionHeading from '../components/section-heading';
 import Rating from "./rating";
 import ButtonGroup from "./button-group";
 import "react-multi-carousel/lib/styles.css";
+import useBaseUrl from '@docusaurus/useBaseUrl';
 
 const responsive = {
   desktop: {
@@ -20,7 +21,7 @@ const TestimonialCard = ({ data }) => {
   return (
     <section id="testimonial" sx={{ variant: 'section.testimonial' }}>
       <Container css={{ textAlign: 'center' }}>
-        <SectionHeading redSlogan slogan="TESTIMONIAL" title="Meet Client Satisfaction" />
+        <SectionHeading redSlogan slogan="TESTIMONIAL" title="Entraprenures, Developers and Business Owners" />
         <Box sx={styles.carouselWrapper}>
           <Carousel
             additionalTransfrom={0}
@@ -59,7 +60,7 @@ const TestimonialCard = ({ data }) => {
                 </Text>
                 <div className="card-footer">
                   <div className="image">
-                    <Image src={item?.data?.avatar?.url} alt="People Image" />
+                    <Image src={useBaseUrl(item?.data?.avatar?.path)} alt="People Image" />
                   </div>
                   <div className="reviewer-info">
                     <Heading as="h4" sx={styles.heading}>
