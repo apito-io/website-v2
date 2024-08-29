@@ -1,15 +1,15 @@
 export const HomePageData = {
   header: {
-    title: "Powerful & Extensible Headless CMS",
+    title: "Build, Scale & Ship APIs Faster",
     images: [
       "https://cdn.apito.io/media/shikho_website_v2_8ma77/30RCY24Q15_Apito_Console___Model.png",
       "https://cdn.apito.io/media/shikho_website_v2_8ma77/1ZGH5QE8U5_Apito_Console___Content.png",
       "https://cdn.apito.io/media/shikho_website_v2_8ma77/IN1TXKJPX5_Apito_Console___API.png",
     ],
     description:
-      "A Powerful Headless CMS With Media Storage, Webhooks, Team Collaborations, Content Revision, Cloud Functions and Much More",
+      "An API builder with Serverless Functions to Empower your API Development Cycle to Ship Software Faster",
     button: {
-      label: "Start A Project",
+      label: "Install Apito CLI",
       link: "/docs/build-api-quick-start-guide",
     },
   },
