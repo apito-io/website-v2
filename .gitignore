@@ -3,6 +3,7 @@
 .idea
 # Production
 /build
+.vscode
 
 # Generated files
 .docusaurus

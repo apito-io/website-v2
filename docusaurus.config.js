@@ -6,8 +6,13 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
+<<<<<<< HEAD
   title: 'Apito CMS',
   tagline: 'A Powerful & Extensible Headless CMS For Your Content With Media Storage, Team Collaborations, Doc Revision & Much more ..',
+=======
+  title: 'Apito',
+  tagline: 'A Powerful API builder with Serverless Functions to Empower your API Development Cycle to Ship Software Faster',
+>>>>>>> 454500c5f4dcba4b31ea3f0824d59987b5fc85c5
   url: 'https://apito.io',
   baseUrl: '/',
   onBrokenLinks: 'throw',
@@ -72,10 +77,10 @@ const config = {
     ({
       announcementBar: {
         id: 'new_sdks_coming_soon',
-        content: 'Coming Soon: Self Host version of Apito on Kubernetes & AWS Cloud',
+        content: '🚀 Apito is Open Source Now 😮 🥳 🥳',
         backgroundColor: '#2160FD',
         textColor: '#fff',
-        //isCloseable: true,
+        //isCloseable: false,
       },
       docs : {
         sidebar : {
@@ -83,28 +88,33 @@ const config = {
         }
       },
       navbar: {
-        title: 'Apito CMS',
+        title: 'Apito',
         logo: {
-          alt: 'Apito Logo',
+          alt: 'Apito LLC Logo',
           src: 'img/logo.svg',
           width: 50,
           height: 50
         },
         items: [
-          {
-            to: '/',
-            label: 'Home',
-            position: 'left',
-          },
+          // {
+          //   to: '/',
+          //   label: 'Home',
+          //   position: 'left',
+          // },
           {
             to: '/docs/build-api-quick-start-guide',
-            label: 'Documentation',
+            label: 'Docs',
             position: 'left',
           },
           {
             to: 'blog',
             label: 'Blog',
             position: 'left'
+          },
+          {
+            href: 'https://app.apito.io',
+            label: 'Cloud',
+            position: 'right'
           },
           {
             type: 'dropdown',
@@ -155,11 +165,6 @@ const config = {
           {
             to: '/pricing',
             label: 'Pricing',
-            position: 'right',
-          },
-          {
-            to: '/faq',
-            label: 'FAQ',
             position: 'right',
           },
         ],
@@ -245,6 +250,17 @@ const config = {
     }),
 
   plugins: [
+    async function myPlugin(context, options) {
+      return {
+        name: "docusaurus-tailwindcss",
+        configurePostCss(postcssOptions) {
+          // Appends TailwindCSS and AutoPrefixer.
+          postcssOptions.plugins.push(require("tailwindcss"));
+          postcssOptions.plugins.push(require("autoprefixer"));
+          return postcssOptions;
+        },
+      };
+    },
     [
       '@docusaurus/plugin-ideal-image',
       {
