@@ -6,6 +6,8 @@ tags: [fahim]
 
 Content management systems (CMS) have revolutionized the way websites are built, managed, and updated. CMS software provides website owners with the tools to create and manage content with ease, without requiring any technical knowledge. However, as website complexity increases, traditional CMS systems have struggled to keep up with the demands of modern web development. This is where GraphQL comes in.
 
+<!-- truncate -->
+
 ## What is GraphQL?
 
 GraphQL is a query language for APIs, designed by Facebook in 2012. It allows developers to define the structure of the data they need and receive exactly that, without over-fetching or under-fetching data. In simpler terms, GraphQL provides a more efficient way to request data from APIs.

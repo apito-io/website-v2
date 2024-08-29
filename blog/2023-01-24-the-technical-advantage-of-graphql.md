@@ -6,6 +6,8 @@ tags: [fahim]
 
 Content management systems (CMS) have come a long way in recent years, with headless CMSs gaining popularity for their flexibility and ability to work with modern frontend technologies. In this blog, we'll explore the technical advantages of using GraphQL APIs in headless CMSs and why developers should consider them for their next project.
 
+<!-- truncate -->
+
 ## What is GraphQL?
 
 GraphQL is a query language for APIs that was developed by Facebook in 2012. It provides a flexible and efficient way to request data from APIs compared to traditional REST APIs. With GraphQL, developers can request only the data they need, reducing the amount of network traffic and improving performance. Additionally, GraphQL provides a strongly typed schema, making it easier to work with data and reducing the likelihood of errors.

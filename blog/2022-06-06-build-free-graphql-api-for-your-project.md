@@ -7,6 +7,8 @@ tags: [fahim]
 If you ever need a GraphQL API for your next project or trying to explore how GraphQL API works
 then Apito is a perfect place for you. You can create free GraphQL Api in Apito Easily.
 
+<!-- truncate -->
+
 ![Todo GraphQL Api](https://cdn.apito.io/media/apito_documentation/3VQ28W29B7_Apito_Console___Todo_GraphQL_Api.png)
 
 ## First, Create your project

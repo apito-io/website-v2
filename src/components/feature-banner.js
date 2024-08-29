@@ -2,9 +2,10 @@
 /** @jsx jsx */
 import {Box, Button, Container, Grid, Image, jsx} from "theme-ui";
 import Markdown from "./markdown";
-import {useState} from "react";
+import React, {useState} from "react";
 import {Swiper, SwiperSlide} from "swiper/react";
 import {Autoplay, FreeMode, Navigation, Thumbs} from "swiper";
+import {Icon} from "@iconify/react";
 
 const FeatureBanner = ({data, hideImage, hideIndicator}) => {
     const [thumbsSwiper, setThumbsSwiper] = useState(null);
@@ -69,16 +70,16 @@ const FeatureBanner = ({data, hideImage, hideIndicator}) => {
                                         sx={styles.mySwiper}
                                     >
                                         <SwiperSlide>
-                                            <span className="material-icons">terminal</span>
-                                            <span>Define Model</span>
+                                            <Icon icon={"flat-color-icons:accept-database"} className="h-6 w-6 mr-4 text-gray-900" />
+                                            <span>Create Model</span>
                                         </SwiperSlide>
                                         <SwiperSlide>
-                                            <span className="material-icons">edit_note</span>
-                                            <span>Write Content</span>
+                                            <Icon icon={"flat-color-icons:document"} className="h-6 w-6 mr-4 text-gray-900" />
+                                            <span>Insert Content</span>
                                         </SwiperSlide>
                                         <SwiperSlide>
-                                            <span className="material-icons">cloud_upload</span>
-                                            <span>Explore API</span>
+                                            <Icon icon={"icon-park:api"} className="h-6 w-6 mr-4 text-gray-900" />
+                                            <span>Explore the API</span>
                                         </SwiperSlide>
                                     </Swiper> : null
                                 }

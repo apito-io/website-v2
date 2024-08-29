@@ -12,6 +12,8 @@ When it comes to choosing which protocol to choose for your next project, nowada
 Rest API & GraphQL, I say, don't get confused and it depends. There are many aspects where using GraphQL is 
 overkill and many cases where GraphQL will thrive over REST API. Let's discuss what's what throughout the post
 
+<!-- truncate -->
+
 ---
 
 Let's discuss what's what throughout the post

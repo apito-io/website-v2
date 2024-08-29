@@ -7,6 +7,8 @@ tags: [fahim]
 Apito is a Cloud based Service that helps you build API easily. You can think of it as a firebase alternative.
 This guide will show you how you can use Apito to build API for your next project or application.
 
+<!-- truncate -->
+
 ![Apito Console](https://cdn.apito.io/media/apito_documentation/2K07YCORYV_Apito_Console.png)
 
 If you havent already created an account in apito please go to [this link](https://app.apito.io) and create one.

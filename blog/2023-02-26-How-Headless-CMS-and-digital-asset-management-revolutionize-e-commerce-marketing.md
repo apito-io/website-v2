@@ -6,6 +6,8 @@ tags: [fahim]
 
 In today's e-commerce landscape, businesses are looking for ways to streamline their operations, enhance the user experience, and drive conversions. A headless CMS coupled with digital asset management (DAM) can offer a powerful solution for achieving these goals. In this blog, we'll explore how headless CMS and DAM can revolutionize e-commerce marketing.
 
+<!-- truncate -->
+
 ## What is a Headless CMS?
 
 A headless CMS is a content management system that separates the content management and presentation layers. In a traditional CMS, the content is tightly coupled with the presentation layer, meaning that changing the presentation layer requires changes to the content management layer. With a headless CMS, the content management layer is decoupled from the presentation layer, giving developers more flexibility in designing and implementing the presentation layer.

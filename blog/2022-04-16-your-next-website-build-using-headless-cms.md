@@ -9,6 +9,8 @@ you might be unsure if they are right for your upcoming project. I listed the be
 of the new strategy above conventional server-side CMS. Thus, you will be able to decide 
 for yourself if Headless CMS will help your project succeed or not.
 
+<!-- truncate -->
+
 # What is a Headless CMS?
 
 Simply said, it is a separate admin panel that is just responsible for managing and storing content. 

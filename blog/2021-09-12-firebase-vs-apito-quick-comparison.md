@@ -9,7 +9,9 @@ they ended up "re-inventing the wheel" Apito and Firebase both come with Backend
 you develop your application faster. A key component of any BaaS is instant APIs over a database 
 
 - once you define your database schema, you should get data APIs instantly.
-  
+
+<!-- truncate -->
+
 ## Comparing Apples to Applesauce
 
 Apito and Firebase both offer APIs over a database while both of them provide this solution on top of a proprietary 

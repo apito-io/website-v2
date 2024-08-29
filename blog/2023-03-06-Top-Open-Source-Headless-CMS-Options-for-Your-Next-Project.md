@@ -6,6 +6,8 @@ tags: [fahim]
 
 When it comes to building modern websites and applications, developers need a flexible and powerful content management system (CMS) that can keep up with their requirements. That's where headless CMS comes in, offering a decoupled architecture that separates the content from the presentation layer, giving developers more freedom to build and customize their applications.
 
+<!-- truncate -->
+
 In this article, we'll explore the best open-source headless CMS options available to developers.
 
 ## Strapi

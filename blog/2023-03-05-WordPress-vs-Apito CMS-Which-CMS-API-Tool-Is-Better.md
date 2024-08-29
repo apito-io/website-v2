@@ -6,6 +6,8 @@ tags: [fahim]
 
 WordPress has long been a popular choice for building websites and content management systems (CMS). With its user-friendly interface and extensive plugin ecosystem, WordPress has become the go-to platform for many businesses and developers. However, in recent years, a new breed of CMS API tools has emerged that offers faster, more scalable, and more flexible options for building headless CMSs. In this article, we'll compare WordPress and Apito CMS, one of the leading CMS API tools on the market, to see which one is better suited for modern web development.
 
+<!-- truncate -->
+
 ## WordPress
 
 WordPress is a free and open-source CMS that powers over 40% of all websites on the internet. With WordPress, users can create custom themes, plugins, and functionality to build a website that meets their specific needs. WordPress also comes with a built-in CMS that allows users to manage their content, pages, and media files from a central location.

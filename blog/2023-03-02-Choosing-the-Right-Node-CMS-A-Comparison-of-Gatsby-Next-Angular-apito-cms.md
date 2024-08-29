@@ -6,6 +6,8 @@ tags: [fahim]
 
 Node.js has become a popular choice for developing content management systems (CMS) due to its scalability, flexibility, and ease of use. There are several Node.js CMS options available, each with its own unique features and advantages. In this article, we'll compare Gatsby, Next.js, Angular, Apito CMS, and GraphQL APIs and help you choose the right one for your project.
 
+<!-- truncate -->
+
 ## Gatsby CMS
 
 Gatsby is a static site generator that uses React.js and GraphQL to build static websites. It offers several advantages, including fast page load times, SEO optimization, and a large plugin ecosystem. Gatsby also offers a headless CMS solution called Gatsby Cloud that allows users to manage their content without the need for a separate CMS.
