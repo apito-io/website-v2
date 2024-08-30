@@ -26,8 +26,8 @@ const ExtraRightNavbarButtons = () => {
 
             {/* GitHub Source Code Button */}
             <a
-                href="https://github.com/your-repo"
-                className="flex items-center px-4 py-2 bg-gray-800 text-white font-medium text-sm rounded-lg hover:bg-gray-700 transition-colors duration-200 whitespace-nowrap"
+                href="https://github.com/apito-io/engine"
+                className="flex items-center px-4 py-2 bg-gray-800 text-white font-medium text-sm rounded-lg hover:bg-primary hover:text-white transition-colors duration-200 whitespace-nowrap"
                 target="_blank"
                 rel="noopener noreferrer"
             >

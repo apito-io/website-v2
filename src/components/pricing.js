@@ -85,7 +85,7 @@ const styles = {
   },
   grid: {
     gridGap: [20, null, null, 20],
-    gridTemplateColumns: ['repeat(1, 1fr)', null, 'repeat(3, 1fr)'],
+    gridTemplateColumns: ['repeat(1, 1fr)', null, 'repeat(2, 1fr)'],
     maxWidth: 1360,
     margin: '0 auto',
   },

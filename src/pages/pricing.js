@@ -17,6 +17,8 @@ import FeatureBanner from "../components/feature-banner";
 import PricingPage from "../components/pricing";
 import {PricingData1} from "../data/pricing1";
 import {PricingData2} from "../data/pricing2";
+import PricingComponent from "../components/pricing-component";
+import PricingDetails from "../components/pricing-details";
 
 function Hello() {
 
@@ -31,8 +33,11 @@ function Hello() {
                 {/*overwrites title and include SEO*/}
                 <Seo data={ {...CommonData.seo, subtitle: 'Pricing' }}/>
 
-                <PricingPage data={PricingData1}/>
-                <PricingPage data={PricingData2}/>
+                {/* <PricingPage data={PricingData1}/>
+                <PricingPage data={PricingData2}/> */}
+
+                <PricingComponent />
+                <PricingDetails />
 
                 <Footer/>
             </ThemeProvider>

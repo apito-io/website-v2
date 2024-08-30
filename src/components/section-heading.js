@@ -12,7 +12,7 @@ const SectionHeading = ({
 }) => {
   return (
     <div sx={styles.heading} {...props}>
-      <Text className={`${redSlogan ? "red" : ""}`} as="span">
+      <Text className={`${redSlogan ? "red" : ""}`} as="h2">
         {slogan}
       </Text>
       <Heading as={as !== undefined ? as : "h2"}>{title}</Heading>

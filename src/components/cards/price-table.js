@@ -8,7 +8,7 @@ const PriceTable = ({ id, data, isMonthly }) => {
   return (
     <div sx={styles.root}>
       <header sx={styles.header}>
-        <Heading as="h2">{data.title}</Heading>
+        <Heading as="h3">{data.title}</Heading>
         <Text as="p">{data.description}</Text>
       </header>
       <ul sx={styles.features}>
@@ -73,7 +73,6 @@ const styles = {
       fontSize: 22,
       lineHeight: 1.32,
       fontWeight: 700,
-      letterSpacing: '-0.55px',
     },
     p: {
       fontSize: 16,

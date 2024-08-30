@@ -1,13 +1,13 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
-import {Box, Button, Container, Grid, Image, jsx} from "theme-ui";
+import { Box, Button, Container, Grid, Image, jsx } from "theme-ui";
 import Markdown from "./markdown";
-import React, {useState} from "react";
-import {Swiper, SwiperSlide} from "swiper/react";
-import {Autoplay, FreeMode, Navigation, Thumbs} from "swiper";
-import {Icon} from "@iconify/react";
+import React, { useState } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, FreeMode, Navigation, Thumbs } from "swiper";
+import { Icon } from "@iconify/react";
 
-const FeatureBanner = ({data, hideImage, hideIndicator}) => {
+const FeatureBanner = ({ data, hideImage, hideIndicator }) => {
     const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
     return (
@@ -15,30 +15,42 @@ const FeatureBanner = ({data, hideImage, hideIndicator}) => {
             <Container>
                 <Grid sx={styles.grid}>
                     <Box sx={styles.heroContent}>
-                        <h1 style={{ fontSize: '4rem', fontWeight: 'bold'}}>
-                            Build, Scale & Ship <span style={{ color: '#EA3A60'}}>APIs</span>  Faster
+                        <div className="mb-6 flex justify-center">
+                            <p
+                                className="relative rounded-full px-4 text-sm leading-6 text-gray-600 ring-1 ring-inset ring-gray-900/10 hover:ring-gray-900/20">
+                                <span className="hidden md:inline">Apito is Open Source.</span>
+                                <a href="#" target="_blank" className="font-semibold text-lime-600">
+                                    <span className="absolute inset-0"></span> Read
+                                    the update <span>→</span>
+                                </a>
+                            </p>
+                        </div>
+
+                        <h1 style={{ fontSize: '4rem', fontWeight: 'bold' }}>
+                            Build, Scale & Ship <span style={{ color: '#EA3A60' }}>APIs</span> Faster
                         </h1>
                         <p>{data?.description}</p>
                         <Box>
                             <code
-                                className="text-sm sm:text-base inline-flex text-left items-center space-x-4 text-white rounded-lg p-4 pl-6 mt-10">
-                                <span className="flex gap-4">
-                                    <span className="shrink-0 text-gray-500">
+                                class="text-sm sm:text-base inline-flex text-left items-center space-x-4 bg-gray-800 text-white rounded-lg p-4 pl-6 mt-5">
+                                <span class="flex gap-4">
+                                    <span class="shrink-0 text-gray-500">
                                         $
                                     </span>
 
-                                    <span className="flex-1">
+                                    <span class="flex-1">
                                         <span>
-                                            apito create
+                                            apito create&nbsp;
                                         </span>
-                                        <span className="ml-3 text-yellow-500">
-                                             project -n fitnessApp
+
+                                        <span class="text-primary">
+                                            project -n fitnessApp
                                         </span>
                                     </span>
                                 </span>
-                                <svg className="shrink-0 h-5 w-5 transition text-gray-500 group-hover:text-white"
-                                     xmlns="http://www.w3.org/2000/svg"
-                                     viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+
+                                <svg class="shrink-0 h-5 w-5 transition text-gray-500 group-hover:text-white" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                                     <path d="M8 2a1 1 0 000 2h2a1 1 0 100-2H8z"></path>
                                     <path
                                         d="M3 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v6h-4.586l1.293-1.293a1 1 0 00-1.414-1.414l-3 3a1 1 0 000 1.414l3 3a1 1 0 001.414-1.414L10.414 13H15v3a2 2 0 01-2 2H5a2 2 0 01-2-2V5zM15 11h2a1 1 0 110 2h-2v-2z">
@@ -51,8 +63,8 @@ const FeatureBanner = ({data, hideImage, hideIndicator}) => {
                                 <Button>{data?.button?.label}</Button>
                             </a>
                         )}
-                        <a style={{marginLeft: '20px'}} href={'https://app.apito.io/login?action=demo'}>
-                            <Button style={{backgroundColor: '#EA3A60'}} type="secondary">Start A Project</Button>
+                        <a style={{ marginLeft: '20px' }} href={'https://app.apito.io/login?action=demo'}>
+                            <Button style={{ backgroundColor: '#EA3A60' }} type="secondary">Start A Project</Button>
                         </a>
                     </Box>
                     {
@@ -86,7 +98,7 @@ const FeatureBanner = ({data, hideImage, hideIndicator}) => {
                                 <Swiper
                                     spaceBetween={0}
                                     slidesPerView={1}
-                                    thumbs={{swiper: thumbsSwiper}}
+                                    thumbs={{ swiper: thumbsSwiper }}
                                     //centeredSlides={true} // Active if center mode
                                     //   centeredSlidesBounds={true}
                                     modules={[FreeMode, Navigation, Thumbs, Autoplay]}
@@ -94,7 +106,7 @@ const FeatureBanner = ({data, hideImage, hideIndicator}) => {
                                         delay: 3000,
                                         disableOnInteraction: false,
                                     }}
-                                    //   effect={"fade"}
+                                //   effect={"fade"}
                                 >
                                     {data?.images &&
                                         data?.images.map((image) => {
@@ -142,9 +154,6 @@ const styles = {
                 fontSize: [28, null, null, 68],
                 lineHeight: 1.35,
             },
-        },
-        span: {
-            color: "primary",
         },
         p: {
             fontSize: [16, null, null, 20],

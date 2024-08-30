@@ -574,7 +574,7 @@ curl https://api.apito.io/secured/rest/ecom/category?name:contains="shirt"`,
                 },
                 rating: 4,
                 title: "Great Tool for Building APIs",
-                twitter_id: "@null"
+                twitter_id: "@apueee"
             },
             id: 4
         },
