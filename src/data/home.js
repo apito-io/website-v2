@@ -599,7 +599,7 @@ curl https://api.apito.io/secured/rest/ecom/category?name:contains="shirt"`,
                 avatar: {
                     path: "/img/testimonial/raiku.png"
                 },
-                name: "Koushik Ambani",
+                name: "Raiku",
                 role: "App Developer",
                 quote: {
                     text: "Tried many headless cms but none of them supports logic handling like aws lambda. Apito is the best api builder for frontend developers"

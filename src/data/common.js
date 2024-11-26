@@ -14,9 +14,9 @@ import oracle from "../icons/png/logo_oracle.png";
 
 export const CommonData = {
     seo: {
-        title: "API Driven Extensible Headless CMS",
+        title: "Build, Scale & Ship APIs Faster | Save Development Time",
         description:
-            "API Driven Powerful Headless CMS For Your Content with Team Collaborations, Revision, Media Storage & Much more",
+            "An API builder with Serverless Functions to Empower your API Development Cycle to Ship Software Faster",
         keywords:
             "api, graphql, rest api, cms headless, cms for website, api integration, free cms, free api, api development, free headless cms, develop an api, api roles, auth api, graphql explorer, multilingual cms, api in cloud",
     },

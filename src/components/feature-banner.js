@@ -19,7 +19,7 @@ const FeatureBanner = ({ data, hideImage, hideIndicator }) => {
                             <p
                                 className="relative rounded-full px-4 text-sm leading-6 text-gray-600 ring-1 ring-inset ring-gray-900/10 hover:ring-gray-900/20">
                                 <span className="hidden md:inline">Apito is Open Source.</span>
-                                <a href="#" target="_blank" className="font-semibold text-lime-600">
+                                <a href="#" target="_blank" className="font-semibold text-primary">
                                     <span className="absolute inset-0"></span> Read
                                     the update <span>→</span>
                                 </a>
