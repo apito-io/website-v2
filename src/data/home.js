@@ -28,7 +28,7 @@ export const HomePageData = {
                 },
                 header: "DEVELOP IN LOCALHOST",
                 icon: "icon-park:terminal",
-                link: "/docs/model/database-design",
+                link: "https://github.com/apito-io/cli",
                 link_text: "Learn How",
                 title: "Localhost to Cloud in Minutes",
             },
